@@ -1,0 +1,21 @@
+{
+  "name": "jsdoc-template",
+  "version": "0.1.0",
+  "author": "Julie Ng <hello@julie.io>",
+  "license": "MIT",
+  "description": "a jsdoc3 template",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jng5/jsdoc-template.git"
+  },
+  "keywords": [
+    "jsdoc",
+    "template"
+  ],
+  "homepage": "https://github.com/jng5/jsdoc-template",
+  "dependencies": {
+    "jsdoc": "^3.4.3",
+    "taffydb": "^2.7.3",
+    "util": "^0.10.3"
+  }
+}
