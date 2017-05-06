@@ -23,7 +23,7 @@
     <?js if (!doc.longname || doc.kind !== 'module') { ?>
         <h2><?js if (doc.ancestors && doc.ancestors.length) { ?>
             <span class="ancestors"><?js= doc.ancestors.join('') ?></span><?js
-         } 
+         }
         ?><?js= doc.name ?><?js
          if (doc.variation) { ?>
             <sup class="variation"><?js= doc.variation ?></sup>
@@ -42,6 +42,13 @@
 
 <article>
     <div class="container-overview">
+
+    <?js if (doc.augments && doc.augments.length) { ?>
+        <h3 class="subsection-title">Extends</h3>
+
+        <?js= self.partial('augments.tmpl', doc) ?>
+    <?js } ?>
+
     <?js if (doc.kind === 'module' && doc.modules) { ?>
         <?js if (doc.description) { ?>
             <div class="description"><?js= doc.description ?></div>
@@ -65,12 +72,6 @@
         <?js } ?>
     <?js } ?>
     </div>
-
-    <?js if (doc.augments && doc.augments.length) { ?>
-        <h3 class="subsection-title">Extends</h3>
-
-        <?js= self.partial('augments.tmpl', doc) ?>
-    <?js } ?>
 
     <?js if (doc.requires && doc.requires.length) { ?>
         <h3 class="subsection-title">Requires</h3>
