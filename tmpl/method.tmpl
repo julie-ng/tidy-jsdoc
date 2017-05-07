@@ -3,6 +3,17 @@ var data = obj;
 var self = this;
 ?>
 <?js if (data.kind !== 'module') { ?>
+
+    <?js
+        var properties = data.properties;
+        if (properties && properties.length && properties.forEach) {
+    ?>
+
+        <h5 class="subsection-title">Properties:</h5>
+        <?js= this.partial('properties.tmpl', data) ?>
+
+    <?js } ?>
+
     <?js if (data.kind === 'class' && data.classdesc) { ?>
     <h2>Constructor</h2>
     <?js } ?>
