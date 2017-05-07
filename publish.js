@@ -169,7 +169,7 @@ function addSignatureReturns(f) {
     }
 
     f.signature = '<span class="signature">' + (f.signature || '') + '</span>' +
-        '<span class="type-signature">' + returnTypesString + '</span>';
+        '<span class="return-type-signature">' + returnTypesString + '</span>';
 }
 
 function addSignatureTypes(f) {
@@ -183,7 +183,7 @@ function addAttribs(f) {
     var attribs = helper.getAttribs(f);
     var attribsString = buildAttribsString(attribs);
 
-    f.attribs = util.format('<span class="type-signature">%s</span>', attribsString);
+    f.attribs = util.format('<span class="method-type-signature">%s</span>', attribs);
 }
 
 function shortenPaths(files, commonPrefix) {
