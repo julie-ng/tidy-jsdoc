@@ -5,12 +5,29 @@ var defaultObjectClass = '';
 
 // Check if the default value is an object or array; if so, apply code highlighting
 if (data.defaultvalue && (data.defaultvaluetype === 'object' || data.defaultvaluetype === 'array')) {
-    data.defaultvalue = "<pre class=\"prettyprint\"><code>" + data.defaultvalue + "</code></pre>";
+    data.defaultvalue = "<pre class=\"language-js\"><code>" + data.defaultvalue + "</code></pre>";
     defaultObjectClass = ' class="object-value"';
 }
+
+var hasDetails = data.version ||
+    data.since ||
+    data.inherited ||
+    data.implementations ||
+    data.implements ||
+    data.mixes ||
+    data.author ||
+    data.deprecated ||
+    data.copyright ||
+    data.license ||
+    data.defaultValue ||
+    data.tutorials ||
+    data.see ||
+    data.todo;
 ?>
 
-<dl class="details">
+<?js if (hasDetails) {?>
+    <dl class="details">
+<?js } ?>
 
     <?js if (data.version) {?>
     <dt class="tag-version">Version:</dt>
@@ -130,4 +147,7 @@ if (data.defaultvalue && (data.defaultvaluetype === 'object' || data.defaultvalu
         <?js }); ?></ul>
     </dd>
     <?js } ?>
-</dl>
+
+<?js if (hasDetails) {?>
+    </dl>
+<?js } ?>
