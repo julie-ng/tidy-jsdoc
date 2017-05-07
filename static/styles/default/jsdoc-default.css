@@ -192,12 +192,12 @@ h6
     font-style: italic;
 }
 
-table
+/*table
 {
     border-spacing: 0;
     border: 0;
     border-collapse: collapse;
-}
+
 
 td, th
 {
@@ -217,7 +217,7 @@ thead tr
 
 th { border-right: 1px solid #aaa; }
 tr > th:last-child { border-right: 1px solid #ddd; }
-
+}*/
 .ancestors { color: #999; }
 .ancestors a
 {
