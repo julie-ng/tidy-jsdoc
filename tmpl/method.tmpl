@@ -13,22 +13,26 @@ var self = this;
         if (properties && properties.length && properties.forEach) {
     ?>
 
-        <h5 class="subsection-title">Properties:</h5>
+        <h5>Properties:</h5>
         <?js= this.partial('properties.tmpl', data) ?>
 
     <?js } ?>
 
 
     <?js if (data.kind === 'class' && data.classdesc) { ?>
-    <h2>Constructor</h2>
+    <h3 class="subtitle">Constructor</h3>
     <?js } ?>
 
-    <h4 class="name" id="<?js= id ?>"><?js= data.attribs + (kind === 'class' ? 'new ' : '') +
+    <div class="method-type">
+    <?js= data.attribs ?>
+    </div>
+
+    <h4 class="method-name" id="<?js= id ?>"><?js= data.attribs + (kind === 'class' ? 'new ' : '') +
     name + (data.signature || '') ?></h4>
 <?js } ?>
 
 <?js if (data.kind !== 'module' && data.description) { ?>
-<div class="description">
+<div class="method-description">
     <?js= data.description ?>
 </div>
 <?js } ?>

@@ -19,7 +19,12 @@
 
 <section>
 
-<header>
+<?js if (doc.kind === 'class') { ?>
+<header class="class">
+<?js } else { ?>
+<header class="not-class">
+<?js } ?>
+
     <?js if (!doc.longname || doc.kind !== 'module') { ?>
         <h2><?js if (doc.ancestors && doc.ancestors.length) { ?>
             <span class="ancestors"><?js= doc.ancestors.join('') ?></span><?js
@@ -44,7 +49,7 @@
     <div class="container-overview">
 
     <?js if (doc.augments && doc.augments.length) { ?>
-        <h3 class="subsection-title">Extends</h3>
+        <h5>Extends</h5>
 
         <?js= self.partial('augments.tmpl', doc) ?>
     <?js } ?>
@@ -139,7 +144,7 @@
         var methods = self.find({kind: 'function', memberof: isGlobalPage ? {isUndefined: true} : doc.longname});
         if (methods && methods.length && methods.forEach) {
     ?>
-        <h3 class="subsection-title">Methods</h3>
+        <h3 class="subtitle">Methods</h3>
 
         <?js methods.forEach(function(m) { ?>
             <?js= self.partial('method.tmpl', m) ?>
