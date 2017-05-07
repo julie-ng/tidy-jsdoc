@@ -13,9 +13,17 @@
     "template"
   ],
   "homepage": "https://github.com/jng5/jsdoc-template",
+  "scripts": {
+    "sass": "gulp sass",
+    "sass:watch": "gulp sass:watch"
+  },
   "dependencies": {
     "jsdoc": "^3.4.3",
     "taffydb": "^2.7.3",
     "util": "^0.10.3"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0"
   }
 }
