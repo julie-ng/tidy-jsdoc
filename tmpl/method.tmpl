@@ -25,12 +25,6 @@ var self = this;
 
     <h4 class="name" id="<?js= id ?>"><?js= data.attribs + (kind === 'class' ? 'new ' : '') +
     name + (data.signature || '') ?></h4>
-
-    <?js if (data.meta && self.outputSourceFiles) {?>
-    <small>
-        Source: <?js= self.linkto(meta.shortpath, meta.shortpath + ':' + meta.lineno) ?>
-    </small>
-    <?js } ?>
 <?js } ?>
 
 <?js if (data.kind !== 'module' && data.description) { ?>
