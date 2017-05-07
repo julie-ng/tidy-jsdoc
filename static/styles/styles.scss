@@ -61,13 +61,13 @@ article.method {
 
   // e.g. "opt"
   .signature-attributes {
-    display: none;
-    // display: inline-block;
-    // margin-left: 0.25em;
-    // font-size: 60%;
-    // color: #aaa;
+    // display: none;
+    display: inline-block;
+    margin-left: 0.25em;
+    font-size: 60%;
+    color: #aaa;
     // font-style: italic;
-    // font-weight: lighter;
+    font-weight: lighter;
   }
 }
 
