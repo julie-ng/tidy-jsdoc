@@ -23,7 +23,7 @@
         url('../fonts/OpenSans-Light-webfont.woff') format('woff'),
         url('../fonts/OpenSans-Light-webfont.svg#open_sanslight') format('svg');
 }
-
+/*
 html
 {
     overflow: auto;
@@ -52,13 +52,13 @@ header
 {
     display: block;
     padding: 0px 4px;
-}
+}*/
 
-tt, code, kbd, samp {
+/*tt, code, kbd, samp {
     font-family: Consolas, Monaco, 'Andale Mono', monospace;
 }
-
-.class-description {
+*/
+/*.class-description {
     font-size: 130%;
     line-height: 140%;
     margin-bottom: 1em;
@@ -68,11 +68,11 @@ tt, code, kbd, samp {
 .class-description:empty {
     margin: 0;
 }
-
-#main {
+*/
+/*#main {
     float: left;
     width: 70%;
-}
+}*/
 
 /*article dl {
     margin-bottom: 40px;
@@ -98,7 +98,7 @@ section
     font-weight: lighter;
 }
 
-nav
+/*nav
 {
     display: block;
     float: right;
@@ -131,6 +131,7 @@ nav h3 {
 nav li {
     margin-top: 6px;
 }
+*/
 
 footer {
     display: block;

@@ -1,7 +1,9 @@
-@import "default/jsdoc-default";
-// @import "default/prettify-tomorrow";
 @import "bootstrap-custom.scss";
 @import "prism.scss";
+
+code {
+  color: #999;
+}
 
 article.method {
   padding: 2em 0;
@@ -11,4 +13,58 @@ article.method {
   &:last-child {
     border-bottom: none;
   }
+}
+
+.method-params-heading {
+  margin: 1em 0;
+  font-weight: 600;
+  font-size: 1em;
+}
+
+ul.params {
+  list-style-type: square;
+}
+
+.param-name {
+  font-weight: 600;
+  font-size: 1.1em;
+  color: #333;
+}
+
+.param-types {
+  display: inline-block;
+  margin: 0 0.5em 0 .25em;
+  color: #999;
+}
+
+.param-attr {
+  border: 1px solid #eee;
+  display: inline-block;
+  color: #aaa;
+  font-weight: 300;
+  padding: 0.2em 0.5em;
+  font-size: 0.8em;
+  vertical-align: baseline;
+}
+
+
+//// jsdoc - default
+
+tt, code, kbd, samp {
+  font-family: Consolas, Monaco, 'Andale Mono', monospace;
+}
+
+.type-signature {
+  color: #aaa;
+}
+
+.name, .signature {
+  font-family: Consolas, Monaco, 'Andale Mono', monospace;
+}
+
+.signature-attributes {
+  font-size: 60%;
+  color: #aaa;
+  font-style: italic;
+  font-weight: lighter;
 }
