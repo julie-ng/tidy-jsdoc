@@ -74,10 +74,10 @@ tt, code, kbd, samp {
     width: 70%;
 }
 
-article dl {
+/*article dl {
     margin-bottom: 40px;
-}
-
+}*/
+/*
 section
 {
     display: block;
@@ -85,7 +85,7 @@ section
     padding: 12px 24px;
     border-bottom: 1px solid #ccc;
     margin-right: 30px;
-}
+}*/
 
 .variation {
     display: none;
@@ -248,13 +248,13 @@ tr > th:last-child { border-right: 1px solid #ddd; }
     font-family: Consolas, Monaco, 'Andale Mono', monospace;
 }
 
-.details { margin-top: 14px; border-left: 2px solid #DDD; }
+/*.details { margin-top: 14px; border-left: 2px solid #DDD; }*/
 .details dt { width: 120px; float: left; padding-left: 10px;  padding-top: 6px; }
 .details dd { margin-left: 70px; }
 .details ul { margin: 0; }
 .details ul { list-style-type: none; }
 .details li { margin-left: 30px; padding-top: 6px; }
-.details pre.prettyprint { margin: 0 }
+/*.details pre.prettyprint { margin: 0 }*/
 .details .object-value { padding-top: 0; }
 
 .description {
@@ -268,7 +268,7 @@ tr > th:last-child { border-right: 1px solid #ddd; }
     font-size: 107%;
     margin: 0;
 }
-
+/*
 .prettyprint
 {
     border: 1px solid #ddd;
@@ -328,7 +328,7 @@ tr > th:last-child { border-right: 1px solid #ddd; }
   -ms-user-select: text;
   user-select: text;
 }
-
+*/
 .params .name, .props .name, .name code {
     color: #4D4E53;
     font-family: Consolas, Monaco, 'Andale Mono', monospace;
