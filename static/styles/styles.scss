@@ -2,3 +2,13 @@
 // @import "default/prettify-tomorrow";
 @import "bootstrap-custom.scss";
 @import "prism.scss";
+
+article.method {
+  padding: 2em 0;
+  margin: 1em 0;
+  border-bottom: 1px solid #ddd;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}

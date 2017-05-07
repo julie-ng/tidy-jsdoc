@@ -2,6 +2,10 @@
 var data = obj;
 var self = this;
 ?>
+<?js if (data.kind !== 'module' && data.kind !== 'class' ) { ?>
+    <article class="method">
+<?js } ?>
+
 <?js if (data.kind !== 'module') { ?>
 
     <?js
@@ -98,3 +102,7 @@ var self = this;
         <?js= self.partial('exceptions.tmpl', r) ?>
     <?js });
 } } ?>
+
+<?js if (data.kind !== 'module' && data.kind !== 'class' ) { ?>
+    </article>
+<?js } ?>
