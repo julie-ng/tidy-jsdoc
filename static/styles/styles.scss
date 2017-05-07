@@ -1,5 +1,8 @@
 @import "bootstrap-custom.scss";
 @import "prism.scss";
+@import "layout.scss";
+
+$code-font: Consolas, Monaco, 'Andale Mono', monospace;
 
 code {
   color: #999;
@@ -9,22 +12,15 @@ ul {
   margin: 1em 0 2em;
 }
 
-// pre {
-//   code {
-//     font-size: 0.9rem;
-//   }
-// }
-
 article.method {
   padding: 2em 0 1em;
   margin: 1em 0;
   border-top: 1px solid #ddd;
-
-
 }
 
+// .page-title,
 .subsection-title {
-  color: #e74c3c;
+  color: #e74c3c; // orange
 }
 
 .subtitle {
@@ -48,6 +44,7 @@ article.method {
   font-size: 1.4rem;
   // color: #e74c3c; // orange
   color: #2980b9;
+  font-family: $code-font;
 
   // [class*="signature"] {
   //   color: #333;
@@ -62,15 +59,15 @@ article.method {
     color: #aaa;
   }
 
-  font-family: Consolas, Monaco, 'Andale Mono', monospace;
-
+  // e.g. "opt"
   .signature-attributes {
-    display: inline-block;
-    margin-left: 0.25em;
-    font-size: 60%;
-    color: #aaa;
-    font-style: italic;
-    font-weight: lighter;
+    display: none;
+    // display: inline-block;
+    // margin-left: 0.25em;
+    // font-size: 60%;
+    // color: #aaa;
+    // font-style: italic;
+    // font-weight: lighter;
   }
 }
 

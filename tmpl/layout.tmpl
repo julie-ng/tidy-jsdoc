@@ -2,24 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: <?js= title ?></title>
+    <title><?js= env.conf.metadata.title ?>: <?js= title ?></title>
     <link type="text/css" rel="stylesheet" href="styles/styles.css">
 </head>
 
 <body>
+<header class="layout-header">
+  <?js= env.conf.metadata.title ?>
+</header>
 
-<div class="container">
-  <div class="row">
-    <div class="col-3">
-      <nav>
-        <?js= this.nav ?>
-      </nav>
-    </div>
-
-    <div id="main" class="col-9">
-      <h1 class="page-title"><?js= title ?></h1>
-      <?js= content ?>
-    </div>
+<div class="layout">
+  <div class="layout-nav">
+    <nav>
+      <a class="nav-title" href="/">
+        <?js= env.conf.metadata.title ?>
+      </a>
+      <?js= this.nav ?>
+    </nav>
+  </div>
+  <div id="main" class="layout-main">
+    <h1 class="page-title"><?js= title ?></h1>
+    <?js= content ?>
   </div>
 </div>
 

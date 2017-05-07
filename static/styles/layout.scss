@@ -1,0 +1,53 @@
+$nav-width: 15rem;
+
+.layout-nav {
+  width: $nav-width;
+  // background: #2c3e50;
+  // color: #fff;
+  background: #f6f8f8;
+  color: #2c3e50;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+
+  a {
+    color: #2c3e50;
+  }
+
+  .nav-title {
+    font-family: Consolas, Monaco, 'Andale Mono', monospace;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #2980b9;
+  }
+
+  nav {
+    padding: 3em 2em 1em;
+    font-size: 0.9rem;
+  }
+
+  ul {
+    margin: 1em 0;
+    padding-left: 0;
+    list-style-type: none;
+  }
+
+  li {
+    font-family: Consolas, Monaco, 'Andale Mono', monospace;
+    margin-bottom: 0.5em;
+  }
+
+  h3 {
+    margin: 2em 0 1em;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: normal;
+    opacity: 0.4;
+  }
+}
+
+.layout-main {
+  padding-left: $nav-width + 2rem;
+  max-width: 80rem;
+}
