@@ -18,10 +18,6 @@ var self = this;
 
     <?js } ?>
 
-    <?js if (data.examples && examples.length) { ?>
-        <h5>Example<?js= examples.length > 1? 's':'' ?></h5>
-        <?js= this.partial('examples.tmpl', examples) ?>
-    <?js } ?>
 
     <?js if (data.kind === 'class' && data.classdesc) { ?>
     <h2>Constructor</h2>
@@ -29,6 +25,12 @@ var self = this;
 
     <h4 class="name" id="<?js= id ?>"><?js= data.attribs + (kind === 'class' ? 'new ' : '') +
     name + (data.signature || '') ?></h4>
+
+    <?js if (data.meta && self.outputSourceFiles) {?>
+    <small>
+        Source: <?js= self.linkto(meta.shortpath, meta.shortpath + ':' + meta.lineno) ?>
+    </small>
+    <?js } ?>
 <?js } ?>
 
 <?js if (data.kind !== 'module' && data.description) { ?>
@@ -61,7 +63,17 @@ var self = this;
     <?js= this.partial('params.tmpl', params) ?>
 <?js } ?>
 
+
 <?js= this.partial('details.tmpl', data) ?>
+
+
+
+<?js if (data.examples && examples.length) { ?>
+    <h5>Example<?js= examples.length > 1? 's':'' ?></h5>
+    <?js= this.partial('examples.tmpl', examples) ?>
+<?js } ?>
+
+
 
 <?js if (data.kind !== 'module' && data.requires && data.requires.length) { ?>
 <h5>Requires:</h5>
