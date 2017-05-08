@@ -1,12 +1,17 @@
-The default template for JSDoc 3 uses: [the Taffy Database library](http://taffydb.com/) and the [Underscore Template library](http://underscorejs.org/).
+# Tidy 
 
+A JSDoc3 template
 
-## Generating Typeface Fonts
+Documentation doesn't have to be ugly and boring.
 
-The default template uses the [OpenSans](https://www.google.com/fonts/specimen/Open+Sans) typeface. The font files can be regenerated as follows:
+![Theme Preview](./images/jsdoc-theme-view.png)
 
-1. Open the [OpenSans page at Font Squirrel](<http://www.fontsquirrel.com/fonts/open-sans>).
-2. Click on the 'Webfont Kit' tab.
-3. Either leave the subset drop-down as 'Western Latin (Default)', or, if we decide we need more glyphs, than change it to 'No Subsetting'.
-4. Click the 'DOWNLOAD @FONT-FACE KIT' button.
-5. For each typeface variant we plan to use, copy the 'eot', 'svg' and 'woff' files into the 'templates/default/static/fonts' directory.
+Based on the default JSDoc 3 template, which uses: 
+- [the Taffy Database library](http://taffydb.com/)
+- [Underscore Template library](http://underscorejs.org/).
+
+## Work in Progress
+
+_(Last updated 8 May 2017)_
+
+Currently just for my use. I intend on eventually publishing this. But I would need to clean up many templates first. The default `publish.js` and underscore templates are hairy. But _done is better than perfect._
