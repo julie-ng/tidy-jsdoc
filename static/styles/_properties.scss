@@ -1,0 +1,16 @@
+.property-name {
+  color: #292b2c;
+}
+
+.properties-table {
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.param-name,
+.property-name {
+  background-color: #ecf0f1;
+  padding: 0.25em 0.5em;
+  border-radius: 3px;
+}

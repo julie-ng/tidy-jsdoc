@@ -1,6 +1,7 @@
 @import "vendor/bootstrap-custom";
 @import "vendor/prism";
 @import "layout";
+@import "properties";
 
 $code-font: Consolas, Monaco, 'Andale Mono', monospace;
 
@@ -27,11 +28,6 @@ article.method {
   margin: 1em 0;
   padding: 0.35em 0.75em;
   border-left: 6px solid #e74c3c;
-  // margin-left: -10px;
-  // background: #95a5a6;
-  // color: #fff;
-  // font-size: 1.3rem;
-  // line-height: 1;
   font-weight: normal;
 
   // & + .method {
@@ -45,6 +41,7 @@ article.method {
   // color: #e74c3c; // orange
   color: #2980b9;
   font-family: $code-font;
+  font-weight: bold;
 
   // [class*="signature"] {
   //   color: #333;

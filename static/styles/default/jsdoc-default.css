@@ -330,13 +330,13 @@ tr > th:last-child { border-right: 1px solid #ddd; }
   user-select: text;
 }
 */
-.params .name, .props .name, .name code {
+/*.params .name, .name code {
     color: #4D4E53;
     font-family: Consolas, Monaco, 'Andale Mono', monospace;
     font-size: 100%;
-}
+}*/
 
-.params td.description > p:first-child,
+/*.params td.description > p:first-child,
 .props td.description > p:first-child
 {
     margin-top: 0;
@@ -349,7 +349,7 @@ tr > th:last-child { border-right: 1px solid #ddd; }
     margin-bottom: 0;
     padding-bottom: 0;
 }
-
+*/
 .disabled {
     color: #454545;
 }
