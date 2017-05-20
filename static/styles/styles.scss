@@ -1,6 +1,6 @@
-@import "bootstrap-custom.scss";
-@import "prism.scss";
-@import "layout.scss";
+@import "vendor/bootstrap-custom";
+@import "vendor/prism";
+@import "layout";
 
 $code-font: Consolas, Monaco, 'Andale Mono', monospace;
 
