@@ -39,7 +39,7 @@
     });
 ?>
 
-<table class="table table-bordered props">
+<table class="properties-table table table-bordered">
     <thead>
     <tr>
         <?js if (props.hasName) {?>
@@ -69,7 +69,7 @@
 
         <tr>
             <?js if (props.hasName) {?>
-                <td class="name"><code><?js= prop.name ?></code></td>
+                <td class="name"><code class="property-name"><?js= prop.name ?></code></td>
             <?js } ?>
 
             <td class="type">
@@ -81,11 +81,11 @@
             <?js if (props.hasAttributes) {?>
                 <td class="attributes">
                 <?js if (prop.optional) { ?>
-                    &lt;optional><br>
+                    &lt;optional&gt;<br>
                 <?js } ?>
 
                 <?js if (prop.nullable) { ?>
-                    &lt;nullable><br>
+                    &lt;nullable&gt;<br>
                 <?js } ?>
                 </td>
             <?js } ?>
@@ -93,7 +93,7 @@
             <?js if (props.hasDefault) {?>
                 <td class="default">
                 <?js if (typeof prop.defaultvalue !== 'undefined') { ?>
-                    <?js= self.htmlsafe(prop.defaultvalue) ?>
+                    <code><?js= self.htmlsafe(prop.defaultvalue) ?></code>
                 <?js } ?>
                 </td>
             <?js } ?>
