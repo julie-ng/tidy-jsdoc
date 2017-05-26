@@ -49,5 +49,9 @@ $nav-width: 15rem;
 
 .layout-main {
   padding-left: $nav-width + 2rem;
-  max-width: 80rem;
+}
+
+.content-wrapper {
+  max-width: 70rem;
+  margin: 0 auto;
 }
