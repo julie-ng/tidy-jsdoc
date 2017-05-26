@@ -12,6 +12,6 @@ Based on the default JSDoc 3 template, which uses:
 
 ## Work in Progress
 
-_(Last updated 8 May 2017)_
+_(Last updated 26 May 2017)_
 
 Currently just for my use. I intend on eventually publishing this. But I would need to clean up many templates first. The default `publish.js` and underscore templates are hairy. But _done is better than perfect._
