@@ -33,6 +33,12 @@
          if (doc.variation) { ?>
             <sup class="variation"><?js= doc.variation ?></sup>
         <?js } ?></h2>
+
+        <?js if (doc.augments && doc.augments.length) { ?>
+            <h5>Extends</h5>
+            <?js= self.partial('augments.tmpl', doc) ?>
+        <?js } ?>
+
         <?js if (doc.classdesc) { ?>
             <div class="class-description"><?js= doc.classdesc ?></div>
         <?js } ?>
@@ -48,11 +54,7 @@
 <article>
     <div class="container-overview">
 
-    <?js if (doc.augments && doc.augments.length) { ?>
-        <h5>Extends</h5>
 
-        <?js= self.partial('augments.tmpl', doc) ?>
-    <?js } ?>
 
     <?js if (doc.kind === 'module' && doc.modules) { ?>
         <?js if (doc.description) { ?>
