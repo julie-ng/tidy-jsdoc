@@ -291,34 +291,65 @@ function attachModuleSymbols(doclets, modules) {
 }
 
 function buildMemberNav(items, itemHeading, itemsSeen, linktoFn) {
-    var nav = '';
+    var nav = []
+    var conf = env.conf.templates || {}
 
-    if (items.length) {
-        var itemsNav = '';
+    conf.default = conf.default || {}
 
-        items.forEach(function(item) {
-            if ( !hasOwnProp.call(item, 'longname') ) {
-                itemsNav += '<li>' + linktoFn('', item.name) + '</li>';
+    if (items && items.length) {
+        var itemsNav = ""
+
+        nav.push(buildNavHeading(itemHeading))
+
+        items.forEach(function (item) {
+            var methods = find({ kind: "function", memberof: item.longname })
+            var members = find({ kind: "member", memberof: item.longname })
+            var displayName
+
+            if (!hasOwnProp.call(item, "longname")) {
+                nav.push(buildNavItem(linkfoFn('', item.name)))
+                return
             }
-            else if ( !hasOwnProp.call(itemsSeen, item.longname) ) {
-                var displayName;
-                if (env.conf.templates.default.useLongnameInNav) {
-                    displayName = item.longname;
+
+            if (!hasOwnProp.call(itemsSeen, item.longname)) {
+                if (!!conf.default.useLongnameInNav) {
+                    displayName = item.longname
+
+                    if (conf.default.useLongnameInNav > 0 && conf.default.useLongnameInNav !== true) {
+                        var num = conf.default.useLongnameInNav
+                        var cropped = item.longname.split(".").slice(-num).join(".")
+                        if (cropped !== displayName) {
+                            displayName = "..." + cropped
+                        }
+                    }
                 } else {
-                    displayName = item.name;
+                    displayName = item.name
                 }
-                itemsNav += '<li>' + linktoFn(item.longname, displayName.replace(/\b(module|event):/g, '')) + '</li>';
 
-                itemsSeen[item.longname] = true;
+                displayName = displayName.replace(/^module:/g, "")
+
+                if (itemHeading === 'Tutorials') {
+                    nav.push(buildNavItem(linktoFn(item.longname, displayName)))
+                } else {
+                    nav.push(buildNavHeading(buildNavType(item.kind, linktoFn(item.longname, displayName))))
+                }
+
+                if (methods.length) {
+                    methods.forEach(function (method) {
+                        if (method.inherited && conf.showInheritedInNav === false) {
+                            return
+                        }
+
+                        nav.push(buildNavItem(buildNavType(method.kind, linkto(method.longname, method.name))))
+                    })
+                }
+
+                itemsSeen[item.longname] = true
             }
-        });
-
-        if (itemsNav !== '') {
-            nav += '<h3>' + itemHeading + '</h3><ul>' + itemsNav + '</ul>';
-        }
+        })
     }
 
-    return nav;
+    return nav
 }
 
 function linktoTutorial(longName, name) {
@@ -341,43 +372,37 @@ function linktoExternal(longName, name) {
  * @param {array<object>} members.tutorials
  * @param {array<object>} members.events
  * @param {array<object>} members.interfaces
- * @return {string} The HTML for the navigation sidebar.
+ * @return {array} The HTML for the navigation sidebar.
  */
 function buildNav(members) {
-    // var nav = '<h2><a href="index.html">Home</a></h2>';
-    var nav = '';
-    var seen = {};
-    var seenTutorials = {};
+    var nav = []
+    var seen = {}
+    var seenTutorials = {}
 
-    nav += buildMemberNav(members.modules, 'Modules', {}, linkto);
-    nav += buildMemberNav(members.externals, 'Externals', seen, linktoExternal);
-    nav += buildMemberNav(members.classes, 'Classes', seen, linkto);
-    nav += buildMemberNav(members.events, 'Events', seen, linkto);
-    nav += buildMemberNav(members.namespaces, 'Namespaces', seen, linkto);
-    nav += buildMemberNav(members.mixins, 'Mixins', seen, linkto);
-    nav += buildMemberNav(members.tutorials, 'Tutorials', seenTutorials, linktoTutorial);
-    nav += buildMemberNav(members.interfaces, 'Interfaces', seen, linkto);
+    nav.push(buildNavLink('home', '<a href="index.html">Home</a>'))
+
+    nav = nav.concat(buildMemberNav(members.tutorials, "Tutorials", seenTutorials, linktoTutorial))
+    nav = nav.concat(buildMemberNav(members.classes, "Classes", seen, linkto))
+    nav = nav.concat(buildMemberNav(members.modules, "Modules", {}, linkto))
+    nav = nav.concat(buildMemberNav(members.externals, "Externals", seen, linktoExternal))
+    nav = nav.concat(buildMemberNav(members.events, "Events", seen, linkto))
+    nav = nav.concat(buildMemberNav(members.namespaces, "Namespaces", seen, linkto))
+    nav = nav.concat(buildMemberNav(members.mixins, "Mixins", seen, linkto))
+    nav = nav.concat(buildMemberNav(members.interfaces, "Interfaces", seen, linkto))
 
     if (members.globals.length) {
-        var globalNav = '';
+        nav.push(buildNavHeading(linkto('global', 'Globals')))
 
-        members.globals.forEach(function(g) {
-            if ( g.kind !== 'typedef' && !hasOwnProp.call(seen, g.longname) ) {
-                globalNav += '<li>' + linkto(g.longname, g.name) + '</li>';
+        members.globals.forEach(function (item) {
+            if (item.kind !== "typedef" && !hasOwnProp.call(seen, item.longname)) {
+                nav.push(buildNavItem(buildNavType(item.kind, linkto(item.longname, item.name))))
             }
-            seen[g.longname] = true;
-        });
 
-        if (!globalNav) {
-            // turn the heading into a link so you can actually get to the global page
-            nav += '<h3>' + linkto('global', 'Global') + '</h3>';
-        }
-        else {
-            nav += '<h3>Global</h3><ul>' + globalNav + '</ul>';
-        }
+            seen[item.longname] = true
+        })
     }
 
-    return nav;
+    return nav.join('')
 }
 
 /**
@@ -654,3 +679,76 @@ exports.publish = function(taffyData, opts, tutorials) {
     }
     saveChildren(tutorials);
 };
+
+
+
+
+/**
+ * Helper to generate navigation list link wrapper around navigation links for
+ * locations.
+ *
+ * @param {String} linkClass navigation link classname
+ * @param {String} linkContent navigation link HTML content
+ * @return {String}
+ */
+function buildNavLink(linkClass, linkContent) {
+    return [
+        '<li class="nav-link nav-' + linkClass + '-link">',
+        linkContent,
+        '</li>'
+    ].join('')
+}
+
+function buildNavType (type, typeLink) {
+  return [
+    '<span class="nav-item-type type-' + type + '">',
+    type[0].toUpperCase(),
+    '</span>',
+
+    '<span class="nav-item-name">',
+    typeLink,
+    '</span>'
+  ].join('')
+}
+
+/**
+ * Helper to generate navigation list header wrapper around navigation header content
+ * for headings and filenames.
+ *
+ * @param {String} content navigation header content
+ * @return {String}
+ */
+function buildNavHeading(content) {
+    return [
+        '<li class="nav-heading">',
+        content,
+        '</li>'
+    ].join('')
+}
+
+/**
+ * Helper for generating generic navigation wrapper around content passed for
+ * methods, and types.
+ *
+ * @param {String} itemContent navigation item content
+ * @return {String}
+ */
+function buildNavItem(itemContent) {
+    return [
+        '<li class="nav-item">',
+        itemContent,
+        '</li>'
+    ].join('')
+}
+
+function buildNavType (type, typeLink) {
+  return [
+    '<span class="nav-item-type type-' + type + '">',
+    type[0].toUpperCase(),
+    '</span>',
+
+    '<span class="nav-item-name">',
+    typeLink,
+    '</span>'
+  ].join('')
+}
