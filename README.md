@@ -23,7 +23,7 @@ Then in your `jsdoc.json` configuration file, change the template options to `ti
 
 ```json
 "opts": {
-	"template": "tidy-jsdoc",
+  "template": "tidy-jsdoc"
 }
 ```
 
