@@ -8,12 +8,18 @@ $nav-width: 280px;
   border-bottom: 1px solid #eee;
   position: fixed;
   height: $header-height;
+  line-height: $header-height;
   padding: 0 $layout-padding;
   top: 0;
   left: 0;
   right: 0;
   width: 100%;
   font-size: 14px;
+
+  h1 {
+    font-weight: 500;
+    font-size: 1.2rem;
+  }
 }
 
 .layout-nav {
@@ -97,22 +103,23 @@ $nav-width: 280px;
   margin-right: 0.5em;
 
   &.type-class {
-    color: #009800;
-    background-color: #bfe5bf;
+    color: #39b739;
+    background-color: #d5efd5;
   }
 
   &.type-function {
-    color: #964cb1;
-    background-color: #f2e4f7;
+    color: #549ab9;
+    background-color: #e1f6ff;
   }
 
   &.type-namespace {
-    color: #1bb9a8;
-    background-color: #c6f3ee;
+    color: #eb6420;
+    background-color: #fad8c7;
   }
 
   &.type-variable {
-    color: #eb6420;
-    background-color: #fad8c7;
+    // purple
+    color: #964cb1;
+    background-color: #f2e4f7;
   }
 }
