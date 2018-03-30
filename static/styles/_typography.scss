@@ -1,0 +1,32 @@
+h5 {
+  margin: 0;
+  font-weight: 600;
+  // font-size: 1em;
+
+  & + .code-caption {
+    margin-top: 1em;
+  }
+}
+
+
+code {
+  color: #888;
+}
+
+
+// .page-title,
+.subsection-title {
+  color: #e74c3c; // orange
+}
+
+.subtitle {
+  margin: 1em 0;
+  padding: 0.35em 0.75em;
+  border-left: 6px solid #e74c3c;
+  // font-weight: normal;
+
+  // & + .method {
+  //   border-top: none;
+  //   padding-top: 0;
+  // }
+}

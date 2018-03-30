@@ -1,135 +1,28 @@
 @import "vendor/bootstrap-custom";
 @import "vendor/prism";
+@import "vars";
 @import "layout";
-@import "properties";
-
-$code-font: Consolas, Monaco, 'Andale Mono', monospace;
-
-code {
-  color: #999;
-}
+@import "typography";
+@import "methods";
+@import "params-properties";
 
 ul {
   margin: 1em 0 2em;
 }
 
-article.method {
-  padding: 2em 0 1em;
-  margin: 1em 0;
-  border-top: 1px solid #ddd;
-}
 
-// .page-title,
-.subsection-title {
-  color: #e74c3c; // orange
-}
 
-.subtitle {
-  margin: 1em 0;
-  padding: 0.35em 0.75em;
-  border-left: 6px solid #e74c3c;
-  font-weight: normal;
 
-  // & + .method {
-  //   border-top: none;
-  //   padding-top: 0;
-  // }
-}
-
-.method-name {
-  font-size: 1.4rem;
-  // color: #e74c3c; // orange
-  color: #2980b9;
-  font-family: $code-font;
-  font-weight: bold;
-
-  // [class*="signature"] {
-  //   color: #333;
-  // }
-
-  // set in publish.js in convoluted manner...
-  .method-type-signature {
-    display: none;
-  }
-
-  .return-type-signature {
-    color: #aaa;
-  }
-
-  // e.g. "opt"
-  .signature-attributes {
-    // display: none;
-    display: inline-block;
-    margin-left: 0.25em;
-    font-size: 60%;
-    color: #aaa;
-    // font-style: italic;
-    font-weight: lighter;
-  }
-}
-
-.method-type {
-  .method-type-signature:not(:empty) {
-    display: inline-block;
-    margin-bottom: 0.75em;
-    background: #ecf0f1;
-    color: #95a5a6;
-    padding: 0.25em 0.5em 0.35em;
-    font-weight: lighter;
-    font-size: 0.8rem;
-  }
-}
-
-.method-description {
-  margin: 0 0 2em;
-}
-
-h5 {
-  margin: 0;
-  font-weight: 600;
-  font-size: 1em;
-
-  & + .code-caption {
-    margin-top: 1em;
-  }
-}
-
-ul.params,
+// ul.params,
 dl.details {
   font-size: 0.9rem;
 }
 
-ul.params {
-  list-style-type: square;
-}
-
-.param-name {
-  font-weight: 600;
-  font-size: 1.1em;
-  color: #333;
-}
-
-.param-types {
-  display: inline-block;
-  margin: 0 0.5em 0 .25em;
-  color: #999;
-}
-
-.param-attr {
-  border: 1px solid #eee;
-  display: inline-block;
-  color: #aaa;
-  font-weight: 300;
-  padding: 0.2em 0.5em;
-  font-size: 0.8em;
-  vertical-align: baseline;
-}
-
-header.class {
-  h2 {
-    display: none;
-  }
-}
+// header.class {
+//   h2 {
+//     display: none;
+//   }
+// }
 
 //// jsdoc - default
 

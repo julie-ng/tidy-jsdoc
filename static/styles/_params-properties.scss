@@ -1,0 +1,48 @@
+ul.params {
+  // font-size: 0.9rem;
+}
+
+
+ul.params {
+  list-style-type: square;
+}
+
+.param-name {
+  // font-weight: 500;
+  // font-size: 1.1em;
+  color: #333;
+}
+
+.param-types {
+  display: inline-block;
+  margin: 0 0.5em 0 .25em;
+  color: #999;
+}
+
+.param-attr {
+  border: 1px solid #eee;
+  display: inline-block;
+  color: #aaa;
+  // font-weight: 300;
+  padding: 0.2em 0.5em;
+  // font-size: 0.8em;
+  vertical-align: baseline;
+}
+
+
+.property-name {
+  color: #292b2c;
+}
+
+.properties-table {
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.param-name,
+.property-name {
+  background-color: #ecf0f1;
+  padding: 0.25em 0.5em 0.2em;
+  border-radius: 3px;
+}

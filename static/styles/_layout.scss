@@ -4,23 +4,23 @@ $nav-width: 15rem;
   width: $nav-width;
   // background: #2c3e50;
   // color: #fff;
-  background: #f6f8f8;
-  color: #2c3e50;
-  position: fixed;
-  left: 0;
-  top: 0;
-  bottom: 0;
+  // background: #f6f8f8;
+  // color: #2c3e50;
+  // position: fixed;
+  // left: 0;
+  // top: 0;
+  // bottom: 0;
 
   a {
     color: #2c3e50;
   }
 
-  .nav-title {
-    font-family: Consolas, Monaco, 'Andale Mono', monospace;
-    font-weight: bold;
-    font-size: 1.1rem;
-    color: #2980b9;
-  }
+  // .nav-title {
+  //   // font-family: Consolas, Monaco, 'Andale Mono', monospace;
+  //   font-weight: 500;
+  //   font-size: 1.1rem;
+  //   color: #2980b9;
+  // }
 
   nav {
     padding: 3em 2em 1em;
@@ -34,7 +34,7 @@ $nav-width: 15rem;
   }
 
   li {
-    font-family: Consolas, Monaco, 'Andale Mono', monospace;
+    // font-family: Consolas, Monaco, 'Andale Mono', monospace;
     margin-bottom: 0.5em;
   }
 
