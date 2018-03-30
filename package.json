@@ -14,6 +14,7 @@
   ],
   "homepage": "https://github.com/jng5/tidy-jsdoc",
   "scripts": {
+    "release": "standard-version",
     "sass": "gulp sass",
     "sass:watch": "gulp sass:watch"
   },
@@ -25,6 +26,7 @@
   },
   "devDependencies": {
     "gulp": "^3.9.1",
-    "gulp-sass": "^3.1.0"
+    "gulp-sass": "^3.1.0",
+    "standard-version": "^4.3.0"
   }
 }
