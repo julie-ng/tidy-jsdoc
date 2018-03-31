@@ -26,13 +26,14 @@
 <?js } ?>
 
     <?js if (!doc.longname || doc.kind !== 'module') { ?>
-        <h2><?js if (doc.ancestors && doc.ancestors.length) { ?>
+        <?js // Hide repeating class and namespace name ?>
+        <!-- <h2><?js if (doc.ancestors && doc.ancestors.length) { ?>
             <span class="ancestors"><?js= doc.ancestors.join('') ?></span><?js
          }
         ?><?js= doc.name ?><?js
          if (doc.variation) { ?>
             <sup class="variation"><?js= doc.variation ?></sup>
-        <?js } ?></h2>
+        <?js } ?></h2> -->
 
         <?js if (doc.augments && doc.augments.length) { ?>
             <h5>Extends</h5>
