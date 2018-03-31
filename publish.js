@@ -118,7 +118,7 @@ function buildAttribsString(attribs) {
     var attribsString = '';
 
     if (attribs && attribs.length) {
-        attribsString = htmlsafe(util.format('(%s) ', attribs.join(', ')));
+        attribsString = htmlsafe(attribs.join(', '));
     }
 
     return attribsString;
@@ -183,7 +183,7 @@ function addAttribs(f) {
     var attribs = helper.getAttribs(f);
     var attribsString = buildAttribsString(attribs);
 
-    f.attribs = util.format('<span class="method-type-signature">%s</span>', attribs);
+    f.attribs = util.format('<span class="method-type-signature">%s</span>', attribsString);
 }
 
 function shortenPaths(files, commonPrefix) {

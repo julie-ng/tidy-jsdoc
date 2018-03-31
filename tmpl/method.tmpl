@@ -27,7 +27,7 @@ var self = this;
     <?js= data.attribs ?>
     </div>
 
-    <h4 class="method-name" id="<?js= id ?>"><?js= data.attribs + (kind === 'class' ? 'new ' : '') +
+    <h4 class="method-name" id="<?js= id ?>"><?js= (kind === 'class' ? 'new ' : '') +
     name + (data.signature || '') ?></h4>
 <?js } ?>
 
