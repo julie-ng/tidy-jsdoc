@@ -16,7 +16,7 @@
   <?js= this.nav ?>
 </nav>
 
-<main class="layout-content">
+<main class="layout-content<?js if (kind === 'source') { ?> layout-content--source<?js } ?>">
   <p class="page-kind"><?js= kind ?></p>
   <h1 class="page-title"><?js= title ?></h1>
   <?js= content ?>

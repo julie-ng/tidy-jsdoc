@@ -65,7 +65,12 @@ $nav-width: 280px;
 .layout-content {
   padding-top: $header-height + $layout-padding;
   padding-left: $nav-width + $layout-padding*2;
-  max-width: 1100px;
+  padding-right: $layout-padding*2;
+  max-width: 1200px;
+}
+
+.layout-content--source {
+  max-width: none;
 }
 
 // Offset fixed header
