@@ -1,15 +1,13 @@
 ul.params {
-  // font-size: 0.9rem;
-}
-
-
-ul.params {
   list-style-type: square;
+  li {
+    li {
+      list-style-type: circle;
+    }
+  }
 }
 
 .param-name {
-  // font-weight: 500;
-  // font-size: 1.1em;
   color: #333;
 }
 
@@ -19,16 +17,16 @@ ul.params {
   color: #999;
 }
 
+// optional tag
 .param-attr {
-  border: 1px solid #eee;
   display: inline-block;
-  color: #aaa;
-  // font-weight: 300;
   padding: 0.2em 0.5em;
-  // font-size: 0.8em;
+  border: 1px solid #eee;
+  color: #aaa;
+  font-weight: 300;
+  font-size: 0.8em;
   vertical-align: baseline;
 }
-
 
 .property-name {
   color: #292b2c;

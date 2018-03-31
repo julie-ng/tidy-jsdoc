@@ -6,22 +6,21 @@ article.method {
   border-top: 1px solid #ddd;
 }
 
-
 .method-name {
   font-size: 1.4rem;
-  // color: #e74c3c; // orange
-  color: #2980b9;
   font-family: $code-font;
   font-weight: 500;
 
+	// parentheses and params
   // [class*="signature"] {
-  //   color: #333;
+  //   color: #666;
   // }
 
-  // set in publish.js in convoluted manner...
-  .method-type-signature {
-    display: none;
-  }
+	// set in publish.js in convoluted manner...
+	// still needed?
+  // .method-type-signature {
+  //   display: none;
+  // }
 
   .return-type-signature {
     color: #aaa;
@@ -29,15 +28,15 @@ article.method {
 
   // e.g. "opt"
   .signature-attributes {
-    // display: none;
     display: inline-block;
     margin-left: 0.25em;
     font-size: 60%;
-    color: #aaa;
-    // font-style: italic;
+    color: #999;
+    font-style: italic;
     font-weight: lighter;
   }
 }
+
 .method-type {
   .method-type-signature:not(:empty) {
     display: inline-block;

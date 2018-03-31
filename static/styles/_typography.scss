@@ -1,32 +1,41 @@
+// Headings: parameters, extends…
 h5 {
   margin: 0;
-  font-weight: 600;
-  // font-size: 1em;
+  font-weight: 500;
+  font-size: 1em;
 
   & + .code-caption {
     margin-top: 1em;
   }
 }
 
-
 code {
   color: #888;
 }
 
+.page-kind {
+	font-weight: 300;
+	color: #999;
+	margin: 0;
+	text-transform: uppercase;
+}
 
-// .page-title,
-.subsection-title {
-  color: #e74c3c; // orange
+// .subsection-title {
+//   color: #e74c3c;
+// }
+
+.method-name {
+	color: #d84315;
 }
 
 .subtitle {
-  margin: 1em 0;
-  padding: 0.35em 0.75em;
-  border-left: 6px solid #e74c3c;
-  // font-weight: normal;
+  margin: 2em 0;
+	padding: 0.35em 0.75em;
+	border-left: 6px solid #d84315;// #5395ca;
+	background: #f5f5f5;
 
-  // & + .method {
-  //   border-top: none;
-  //   padding-top: 0;
-  // }
+  & + .method {
+    border-top: none;
+    padding-top: 0;
+  }
 }

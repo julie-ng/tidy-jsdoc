@@ -4,8 +4,8 @@ $header-offset: $header-height + $layout-padding;
 $nav-width: 280px;
 
 .layout-header {
-  background: #fafafa;
-  border-bottom: 1px solid #eee;
+  background: #21252b;
+  color: #fff;
   position: fixed;
   height: $header-height;
   line-height: $header-height;
@@ -15,6 +15,7 @@ $nav-width: 280px;
   right: 0;
   width: 100%;
   font-size: 14px;
+  z-index: 1;
 
   h1 {
     font-weight: 500;
@@ -23,9 +24,9 @@ $nav-width: 280px;
 }
 
 .layout-nav {
-  padding: 2em $layout-padding 0;
+  padding: 0.5em $layout-padding 0;
   width: $nav-width;
-  border-right: 1px solid #eee;
+  border-right: 1px solid #e5e5e5;
   position: fixed;
   left: 0;
   top: $header-height;
@@ -39,7 +40,7 @@ $nav-width: 280px;
 
   li {
     list-style-type: none;
-    margin-left: $layout-padding;
+    margin-left: $layout-padding/2;
     margin-bottom: 0.25em;
     font-size: 0.95em;
 
@@ -88,9 +89,13 @@ $nav-width: 280px;
       }
     }
   }
+
+  .nav-item-type {
+    font-size: 0.9em;
+  }
 }
 
-// colors from esdoc
+// colors based on esdoc
 .nav-item-type {
   display: inline-block;
   font-size: 0.9em;
