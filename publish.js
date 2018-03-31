@@ -385,10 +385,6 @@ function buildNav(members) {
     var seen = {};
     var seenTutorials = {};
 
-    // nav.push(buildNavLink('home', '<a href="index.html">Home</a>'))
-
-    console.log('what is nav now?', nav);
-
     nav = nav.concat(buildMemberNav(members.tutorials, "Tutorials", seenTutorials, linktoTutorial));
     nav = nav.concat(buildMemberNav(members.classes, "Classes", seen, linkto));
     nav = nav.concat(buildMemberNav(members.modules, "Modules", {}, linkto));
@@ -411,8 +407,6 @@ function buildNav(members) {
     }
 
     return nav.join('');
-
-    // return '<ul>' + nav.join('') + '</ul>';
 }
 
 /**
