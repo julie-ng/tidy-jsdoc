@@ -39,3 +39,13 @@ code {
     padding-top: 0;
   }
 }
+
+.source-page {
+	code {
+		z-index: 1;
+	}
+
+	.line-height.temporary {
+		z-index: 0;
+	}
+}
