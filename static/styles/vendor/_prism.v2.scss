@@ -57,7 +57,8 @@ pre[class*="language-"] {
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-	background: #f7f7f9;
+	background: #fafafa;
+	border: 1px solid #dedede;
 }
 
 /* Inline code */
@@ -107,7 +108,6 @@ pre[class*="language-"] {
 .language-css .token.string,
 .style .token.string {
 	color: #9a6e3a;
-	// background: hsla(0, 0%, 100%, .5);
 }
 
 .token.atrule,
@@ -151,8 +151,8 @@ pre[data-line] {
 	padding: inherit 0;
 	margin-top: 1em; /* Same as .prism’s padding-top */
 
-	background: rgba(0, 204, 230, 0.12);
-	// background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+	background: #fff068; // yellow
+	// background: rgba(0, 204, 230, 0.12); // light blue
 
 	pointer-events: none;
 
@@ -208,7 +208,6 @@ pre.line-numbers > code {
 	left: -3.8em;
 	width: 3em; /* works for line-numbers below 1000 lines */
 	letter-spacing: -1px;
-	border-right: 1px solid #dedede;
 
 	-webkit-user-select: none;
 	-moz-user-select: none;
