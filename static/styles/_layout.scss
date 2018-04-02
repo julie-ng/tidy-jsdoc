@@ -18,9 +18,18 @@ $nav-width: 280px;
   z-index: 10;
 
   h1 {
-    font-weight: 500;
+    display: inline-block;
+    font-weight: 400;
     font-size: 1.2rem;
+    line-height: $header-height;
   }
+}
+
+.layout-header-logo {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: $layout-padding/2;
+  max-height: $header-height - $layout-padding/2;
 }
 
 .layout-nav {

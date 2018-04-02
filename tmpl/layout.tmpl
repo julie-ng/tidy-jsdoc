@@ -4,11 +4,26 @@
     <meta charset="utf-8">
     <title><?js= env.conf.metadata.title ?>: <?js= title ?></title>
     <link type="text/css" rel="stylesheet" href="styles/styles.css">
+    <style>
+      <?js if (env.conf.metadata.header) { ?>
+      .layout-header {
+        <?js if (env.conf.metadata.header.background) { ?>background: <?js= env.conf.metadata.header.background ?>;<?js } ?>
+        <?js if (env.conf.metadata.header.color) { ?>color: <?js= env.conf.metadata.header.color ?>;<?js } ?>
+        <?js if (env.conf.metadata.header.border) { ?>border-bottom: <?js= env.conf.metadata.header.border ?>;<?js } ?>
+      }
+      <?js } ?>
+    </style>
 </head>
-
 <body>
 
 <header class="layout-header">
+  <?js if (env.conf.metadata.header && env.conf.metadata.header.logo) { ?>
+    <img class="layout-header-logo"
+      src="./../<?js= env.conf.metadata.header.logo ?>"
+      alt="<?js= env.conf.metadata.title ?>"
+      <?js if (env.conf.metadata.header.logo_styles) { ?>style="<?js= env.conf.metadata.header.logo_styles ?>"<?js } ?>
+    >
+  <?js } ?>
   <h1><?js= env.conf.metadata.title ?></h1>
 </header>
 
