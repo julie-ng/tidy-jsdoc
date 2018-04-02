@@ -890,6 +890,9 @@ function applyHash() {
 	highlightLines(pre, range, 'temporary ');
 
 	document.querySelector('.temporary.line-highlight').scrollIntoView();
+
+	// offset fixed header with buffer
+	window.scrollBy(0, -100);
 }
 
 var fakeTimer = 0; // Hack to limit the number of times applyHash() runs
@@ -941,6 +944,7 @@ Prism.hooks.add('complete', function completeHook(env) {
 	}
 });
 
+	window.addEventListener('load', applyHash);
 	window.addEventListener('hashchange', applyHash);
 	window.addEventListener('resize', function () {
 		var preElements = document.querySelectorAll('pre[data-line]');
