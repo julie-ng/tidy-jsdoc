@@ -19,11 +19,11 @@ npm install --save-dev tidy-jsdoc
 
 #### 2. Configure JSDoc
 
-Then in your `jsdoc.json` configuration file, change the template options to `tidy-jsdoc`, like so:
+Then in your `jsdoc.json` configuration file, change the template options to:
 
 ```json
 "opts": {
-  "template": "tidy-jsdoc"
+  "template": "node_modules/tidy-jsdoc"
 }
 ```
 
