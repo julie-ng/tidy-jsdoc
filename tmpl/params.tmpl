@@ -11,7 +11,14 @@
         }
 
         if (parentParam && parentParam.name && param.name) {
-            paramRegExp = new RegExp('^(?:' + parentParam.name + '(?:\\[\\])*)\\.(.+)$');
+            try {
+                paramRegExp = new RegExp('^(?:' + parentParam.name + '(?:\\[\\])*)\\.(.+)$');
+            }
+            catch (e) {
+                // there's probably a typo in the JSDoc comment that resulted in a weird
+                // parameter name
+                return;
+            }
 
             if ( paramRegExp.test(param.name) ) {
                 param.name = RegExp.$1;
@@ -50,50 +57,75 @@
     });
 ?>
 
-<ul class="params">
-<?js
-    var self = this;
-    params.forEach(function(param) {
-        if (!param) { return; }
-?>
-    <li>
-        <div>
-            <code class="param-name"><?js= param.name ?></code>
+<table class="params">
+    <thead>
+    <tr>
+        <?js if (params.hasName) {?>
+        <th>Name</th>
+        <?js } ?>
 
-            <?js if (param.type && param.type.names) {?>
-            <div class="param-types">
-                <?js= self.partial('type.tmpl', param.type.names) ?>
-            </div>
-            <?js } ?>
+        <th>Type</th>
 
         <?js if (params.hasAttributes) {?>
-            <?js if (param.optional) { ?>
-                <span class="param-attr">optional</span>
-            <?js } ?>
-
-            <?js if (param.nullable) { ?>
-                <span class="param-attr">nullable</span>
-            <?js } ?>
-
-            <?js if (param.variable) { ?>
-                <span class="param-attr">repeatable</span>
-            <?js } ?>
+        <th>Attributes</th>
         <?js } ?>
-
-        </div>
 
         <?js if (params.hasDefault) {?>
-            <div class="param-default">
-            <?js if (typeof param.defaultvalue !== 'undefined') { ?>
-                Default: <code><?js= self.htmlsafe(param.defaultvalue) ?></code>
-            <?js } ?>
-            </div>
+        <th>Default</th>
         <?js } ?>
 
-        <div class="param-description"><?js= param.description ?><?js if (param.subparams) { ?>
-            <?js= self.partial('params.tmpl', param.subparams) ?>
-        <?js } ?></div>
-    </li>
+        <th class="last">Description</th>
+    </tr>
+    </thead>
 
-<?js }); ?>
-</ul>
+    <tbody>
+    <?js
+        var self = this;
+        params.forEach(function(param) {
+            if (!param) { return; }
+    ?>
+
+        <tr>
+            <?js if (params.hasName) {?>
+                <td class="name"><code><?js= param.name ?></code></td>
+            <?js } ?>
+
+            <td class="type">
+            <?js if (param.type && param.type.names) {?>
+                <?js= self.partial('type.tmpl', param.type.names) ?>
+            <?js } ?>
+            </td>
+
+            <?js if (params.hasAttributes) {?>
+                <td class="attributes">
+                <?js if (param.optional) { ?>
+                    &lt;optional><br>
+                <?js } ?>
+
+                <?js if (param.nullable) { ?>
+                    &lt;nullable><br>
+                <?js } ?>
+
+                <?js if (param.variable) { ?>
+                    &lt;repeatable><br>
+                <?js } ?>
+                </td>
+            <?js } ?>
+
+            <?js if (params.hasDefault) {?>
+                <td class="default">
+                <?js if (typeof param.defaultvalue !== 'undefined') { ?>
+                    <?js= self.htmlsafe(param.defaultvalue) ?>
+                <?js } ?>
+                </td>
+            <?js } ?>
+
+            <td class="description last"><?js= param.description ?><?js if (param.subparams) { ?>
+                <h6>Properties</h6>
+                <?js= self.partial('params.tmpl', param.subparams) ?>
+            <?js } ?></td>
+        </tr>
+
+    <?js }); ?>
+    </tbody>
+</table>
