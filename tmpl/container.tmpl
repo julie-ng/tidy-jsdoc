@@ -135,9 +135,14 @@
                 });
             }
             if (members && members.length && members.forEach) {
+                var hasProperties = members[0].properties && members[0].properties.length && members[0].properties.forEach;
         ?>
-        <h3 class="subtitle">Properties</h3>
-        <ul class="properties">
+
+        <?js if (hasProperties) { ?>
+            <h3 class="subtitle">Properties</h3>
+            <ul class="properties">
+        <?js } ?>
+
         <?js members.forEach(function(p) {
             if (p.properties && p.properties.length && p.properties.forEach) {
                 var prop = p.properties[0];
@@ -153,7 +158,10 @@
             </li>
             <?js }
         }); ?>
+
+        <?js if (hasProperties) { ?>
         </ul>
+        <?js } ?>
 
     <?js } ?>
 
