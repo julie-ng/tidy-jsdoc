@@ -1,6 +1,6 @@
 {
   "name": "tidy-jsdoc",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "author": "Julie Ng <hello@julie.io>",
   "license": "Apache-2.0",
   "description": "a jsdoc3 template",
