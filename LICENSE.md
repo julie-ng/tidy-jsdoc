@@ -27,6 +27,8 @@ For this template, the following originally distributed third-party software has
 
 This project introduces new third-party software:
 
-- [Prism](https://github.com/PrismJS/prism) is used for source code formatting.
+- [Prism](https://github.com/PrismJS/prism) is used for source code formatting. Prism is available for free under the MIT License.
+
+- [Bootstrap](https://getbootstrap.com/) is used for base styles of components, for example tables. Bootstrap is available for free under the MIT License.
 
 
