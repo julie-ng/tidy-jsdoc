@@ -2,6 +2,44 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.2.0"></a>
+# [0.2.0](https://github.com/julie-ng/tidy-jsdoc/compare/v0.1.0...v0.2.0) (2018-04-03)
+
+
+### Bug Fixes
+
+* **layout:** custom logo path ([a910ce0](https://github.com/julie-ng/tidy-jsdoc/commit/a910ce0))
+
+
+### Features
+
+* **bootstrap:** improve importing, use latest variables ([0f95bfb](https://github.com/julie-ng/tidy-jsdoc/commit/0f95bfb))
+* **bootstrap:** minimize imports ([4336ca9](https://github.com/julie-ng/tidy-jsdoc/commit/4336ca9))
+* **bootstrap:** update from alpha to v4.0.0 release ([a2990e6](https://github.com/julie-ng/tidy-jsdoc/commit/a2990e6))
+* **design:** replace default nav with minami template nav ([18b916f](https://github.com/julie-ng/tidy-jsdoc/commit/18b916f))
+* **layout:** add kind, e.g. class or namespace to content ([97f7a75](https://github.com/julie-ng/tidy-jsdoc/commit/97f7a75))
+* **layout:** add new navigation, shows functions too ([100fdcb](https://github.com/julie-ng/tidy-jsdoc/commit/100fdcb))
+* **layout:** adjust default colors ([6d3cb8b](https://github.com/julie-ng/tidy-jsdoc/commit/6d3cb8b))
+* **layout:** allow jsdoc config to override colors, add logo ([f896517](https://github.com/julie-ng/tidy-jsdoc/commit/f896517))
+* **layout:** apply bootstrap and custom styles to params tables ([aef518b](https://github.com/julie-ng/tidy-jsdoc/commit/aef518b))
+* **layout:** hide repeating class and namespace name ([68b8349](https://github.com/julie-ng/tidy-jsdoc/commit/68b8349))
+* **layout:** list properties of members, instead of table ([774bfbe](https://github.com/julie-ng/tidy-jsdoc/commit/774bfbe))
+* **layout:** only show properties heading if we have properties ([d696753](https://github.com/julie-ng/tidy-jsdoc/commit/d696753))
+* **layout:** remove dummy list from source. Fix link to source for prism JS ([1cd7083](https://github.com/julie-ng/tidy-jsdoc/commit/1cd7083))
+* **layout:** restore default template for params with tables ([f59f835](https://github.com/julie-ng/tidy-jsdoc/commit/f59f835))
+* **nav:** soften colors ([68e5432](https://github.com/julie-ng/tidy-jsdoc/commit/68e5432))
+* **prism:** add dev version ([9f36599](https://github.com/julie-ng/tidy-jsdoc/commit/9f36599))
+* **source:** adjust colors, styles ([a445046](https://github.com/julie-ng/tidy-jsdoc/commit/a445046))
+* **source:** link to specific line ([2e624ac](https://github.com/julie-ng/tidy-jsdoc/commit/2e624ac))
+* **source:** no max-width, format page title like others ([84c3a16](https://github.com/julie-ng/tidy-jsdoc/commit/84c3a16))
+* **template:** adjust prism and line highlight styles ([9b62f2f](https://github.com/julie-ng/tidy-jsdoc/commit/9b62f2f))
+* **template:** adjust signatures formatting ([6651ae8](https://github.com/julie-ng/tidy-jsdoc/commit/6651ae8))
+* **template:** rename 'Members' heading to 'Properties' ([9d47cad](https://github.com/julie-ng/tidy-jsdoc/commit/9d47cad))
+* **typography:** make method names stand out more ([19e9837](https://github.com/julie-ng/tidy-jsdoc/commit/19e9837))
+* **typography:** separate kind from page title ([3365e3b](https://github.com/julie-ng/tidy-jsdoc/commit/3365e3b))
+
+
+
 <a name="0.1.0"></a>
 # 0.1.0 (2017-05-26)
 
