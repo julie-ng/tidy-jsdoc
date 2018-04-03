@@ -57,7 +57,7 @@
     });
 ?>
 
-<table class="params">
+<table class="table table-bordered params">
     <thead>
     <tr>
         <?js if (params.hasName) {?>
@@ -87,7 +87,7 @@
 
         <tr>
             <?js if (params.hasName) {?>
-                <td class="name"><code><?js= param.name ?></code></td>
+                <td class="name"><code class="param-name"><?js= param.name ?></code></td>
             <?js } ?>
 
             <td class="type">
@@ -99,15 +99,15 @@
             <?js if (params.hasAttributes) {?>
                 <td class="attributes">
                 <?js if (param.optional) { ?>
-                    &lt;optional><br>
+                    &lt;optional&gt;<br>
                 <?js } ?>
 
                 <?js if (param.nullable) { ?>
-                    &lt;nullable><br>
+                    &lt;nullable&gt;<br>
                 <?js } ?>
 
                 <?js if (param.variable) { ?>
-                    &lt;repeatable><br>
+                    &lt;repeatable&gt;<br>
                 <?js } ?>
                 </td>
             <?js } ?>
@@ -121,7 +121,7 @@
             <?js } ?>
 
             <td class="description last"><?js= param.description ?><?js if (param.subparams) { ?>
-                <h6>Properties</h6>
+                <h4>Properties</h4>
                 <?js= self.partial('params.tmpl', param.subparams) ?>
             <?js } ?></td>
         </tr>
