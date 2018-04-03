@@ -1,52 +1,39 @@
 <?js
 var data = obj;
 var self = this;
-var props = [];
-var hasDefaults = false;
-
-data.forEach(function(member) {
-    var p = member.properties[0];
-    props.push(p);
-    if (p.hasOwnProperty('defaultvalue')) { hasDefaults = true; }
-});
 ?>
 
-<table class="properties-table table table-bordered">
-    <thead>
-    <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <?js if (hasDefaults) {?>
-        <th>Default</th>
-        <?js } ?>
-        <th>Description</th>
-    </tr>
-    </thead>
-    <tbody>
-    <?js props.forEach(function(prop) { ?>
-        <tr>
-            <td class="name">
-                <code class="property-name"><?js= prop.name ?></code>
-            </td>
+<h4 class="name" id="<?js= id ?>"><?js= data.attribs + name + (data.signature ? data.signature : '') ?></h4>
 
-            <td class="type">
-            <?js if (prop.type && prop.type.names) {?>
-                <?js= self.partial('type.tmpl', prop.type.names) ?>
-            <?js } ?>
-            </td>
+<?js if (data.summary) { ?>
+<p class="summary"><?js= summary ?></p>
+<?js } ?>
 
-            <?js if (hasDefaults) {?>
-            <td class="default">
-            <?js if (typeof prop.defaultvalue !== 'undefined') { ?>
-                <code><?js= self.htmlsafe(prop.defaultvalue) ?></code>
-            <?js } ?>
-            </td>
-            <?js } ?>
+<?js if (data.description) { ?>
+<div class="description">
+    <?js= data.description ?>
+</div>
+<?js } ?>
 
-            <td class="description last">
-                <?js= prop.description ?>
-            </td>
-        </tr>
-    <?js }); ?>
-    </tbody>
-</table>
+<?js if (data.type && data.type.names) {?>
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            <?js= self.partial('type.tmpl', data.type.names) ?>
+        </li>
+    </ul>
+<?js } ?>
+
+<?js this.partial('details.tmpl', data) ?>
+
+<?js if (data.fires && fires.length) { ?>
+    <h5>Fires:</h5>
+    <ul><?js fires.forEach(function(f) { ?>
+        <li><?js= self.linkto(f) ?></li>
+    <?js }); ?></ul>
+<?js } ?>
+
+<?js if (data.examples && examples.length) { ?>
+    <h5>Example<?js= examples.length > 1? 's':'' ?></h5>
+    <?js= this.partial('examples.tmpl', examples) ?>
+<?js } ?>

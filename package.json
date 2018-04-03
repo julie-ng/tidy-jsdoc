@@ -2,7 +2,7 @@
   "name": "tidy-jsdoc",
   "version": "0.1.0",
   "author": "Julie Ng <hello@julie.io>",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "description": "a jsdoc3 template",
   "repository": {
     "type": "git",
@@ -19,7 +19,7 @@
     "sass:watch": "gulp sass:watch"
   },
   "dependencies": {
-    "bootstrap": "^4.0.0-alpha.6",
+    "bootstrap": "^4.0.0",
     "jsdoc": "^3.4.3",
     "taffydb": "^2.7.3",
     "util": "^0.10.3"
