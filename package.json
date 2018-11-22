@@ -3,7 +3,7 @@
   "version": "0.2.1",
   "author": "Julie Ng <hello@julie.io>",
   "license": "Apache-2.0",
-  "description": "a jsdoc3 template",
+  "description": "A clean JSDoc3 template",
   "repository": {
     "type": "git",
     "url": "https://github.com/julie-ng/tidy-jsdoc.git"
