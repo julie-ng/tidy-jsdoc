@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.2.2"></a>
+## [0.2.2](https://github.com/julie-ng/tidy-jsdoc/compare/v0.2.1...v0.2.2) (2018-11-22)
+
+
+### Bug Fixes
+
+* update dependencies per audit ([da49089](https://github.com/julie-ng/tidy-jsdoc/commit/da49089))
+
+
+
 <a name="0.2.1"></a>
 ## [0.2.1](https://github.com/julie-ng/tidy-jsdoc/compare/v0.2.0...v0.2.1) (2018-04-03)
 
