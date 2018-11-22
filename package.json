@@ -3,7 +3,7 @@
   "version": "0.2.1",
   "author": "Julie Ng <hello@julie.io>",
   "license": "Apache-2.0",
-  "description": "a jsdoc3 template",
+  "description": "A clean JSDoc3 template",
   "repository": {
     "type": "git",
     "url": "https://github.com/julie-ng/tidy-jsdoc.git"
@@ -19,13 +19,13 @@
     "sass:watch": "gulp sass:watch"
   },
   "dependencies": {
-    "bootstrap": "^4.0.0",
+    "bootstrap": "^4.1.2",
     "jsdoc": "^3.4.3",
     "taffydb": "^2.7.3",
     "util": "^0.10.3"
   },
   "devDependencies": {
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.0",
     "gulp-sass": "^3.1.0",
     "standard-version": "^4.3.0"
   }
