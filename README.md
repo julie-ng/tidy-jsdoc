@@ -35,6 +35,14 @@ Then generate documents refering this template:
 jsdoc -c jsdoc.json
 ```
 
+## Preview Example
+
+The following documents were generated for an internal library used for work.
+
+![v0.2.0 Preview](./images/v0.2-preview-1.png)
+
+![v0.2.0 Preview with source code](./images/v0.2-preview-2.png)
+
 ## Development
 
 This is a bootstrap based template, so when working with sass, you can automatically build the CSS like so.
