@@ -1,11 +1,15 @@
 @import "vars";
 
-article.method {
-  padding: 2em 0 1em;
-  margin: 1em 0;
-  border-top: 1px solid #ddd;
+article {
+  &.event,
+  &.method {
+    padding: 2em 0 1em;
+    margin: 1em 0;
+    border-top: 1px solid #ddd;
+  }
 }
 
+.event-name,
 .method-name {
   font-size: 1.4rem;
   font-family: $code-font;
@@ -37,6 +41,7 @@ article.method {
   }
 }
 
+.event-type,
 .method-type {
   .method-type-signature:not(:empty) {
     display: inline-block;
@@ -53,6 +58,7 @@ article.method {
   margin: 1em 0;
 }
 
+.event-description,
 .method-description {
   margin: 0 0 2em;
 }
