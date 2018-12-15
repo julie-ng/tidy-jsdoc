@@ -1,5 +1,9 @@
 # Tidy
 
+<a href="https://travis-ci.org/julie-ng/tidy-jsdoc" target="_blank">
+  <img src="https://travis-ci.org/julie-ng/tidy-jsdoc.svg?branch=master">
+</a>
+
 A JSDoc3 template
 
 Documentation doesn't have to be ugly and boring.
