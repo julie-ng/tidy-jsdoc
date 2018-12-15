@@ -24,7 +24,11 @@
       <?js if (env.conf.metadata.header.logo_styles) { ?>style="<?js= env.conf.metadata.header.logo_styles ?>"<?js } ?>
     >
   <?js } ?>
-  <h1><?js= env.conf.metadata.title ?></h1>
+  <h1>
+    <a href="./">
+      <?js= env.conf.metadata.title ?>
+    </a>
+  </h1>
 </header>
 
 <nav class="layout-nav">

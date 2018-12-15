@@ -3305,6 +3305,8 @@ pre.line-numbers > code {
   width: 100%;
   font-size: 14px;
   z-index: 10; }
+  .layout-header a {
+    color: #fff; }
   .layout-header h1 {
     display: inline-block;
     font-weight: 400;
