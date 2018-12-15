@@ -3553,4 +3553,22 @@ tt, code, kbd, samp {
     margin-left: 9rem; }
 
 .table {
-  margin-top: 1rem; }
+  margin-top: 1rem;
+  width: auto;
+  min-width: 400px;
+  max-width: 100%; }
+  .table th, .table h4 {
+    font-weight: 500; }
+  .table th,
+  .table td {
+    padding: 0.5rem 0.75rem; }
+  .table p:last-child {
+    margin-bottom: 0; }
+
+.table-bordered thead th {
+  border-bottom-width: 1px; }
+
+.table-bordered th,
+.table-bordered td {
+  border: none;
+  border-top: 1px solid #ececec; }
