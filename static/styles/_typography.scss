@@ -1,3 +1,7 @@
+h1 {
+	font-size: 2rem;
+}
+
 // Headings: parameters, extends…
 h5 {
   margin: 0;
@@ -60,4 +64,27 @@ code {
 	padding-left: 1px;
 	letter-spacing: 1px;
 	color: #c0c0c0;
+}
+
+pre {
+	&.source {
+		background: #f1f2f3;
+		padding: 1rem;
+	}
+}
+
+.readme {
+	h2 {
+		border-bottom: 1px solid #ddd;
+		margin: 1em 0;
+		padding-bottom: 0.5rem;
+
+		& + h3 {
+			margin-top: 0;
+		}
+	}
+
+	h3 {
+		margin: 2rem 0 1rem 0;
+	}
 }

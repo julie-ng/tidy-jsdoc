@@ -3397,6 +3397,9 @@ pre.line-numbers > code {
     color: #948b34;
     background-color: #fff6a6; }
 
+h1 {
+  font-size: 2rem; }
+
 h5 {
   margin: 0;
   font-weight: 500;
@@ -3439,6 +3442,20 @@ code {
   padding-left: 1px;
   letter-spacing: 1px;
   color: #c0c0c0; }
+
+pre.source {
+  background: #f1f2f3;
+  padding: 1rem; }
+
+.readme h2 {
+  border-bottom: 1px solid #ddd;
+  margin: 1em 0;
+  padding-bottom: 0.5rem; }
+  .readme h2 + h3 {
+    margin-top: 0; }
+
+.readme h3 {
+  margin: 2rem 0 1rem 0; }
 
 article.event, article.method {
   padding: 2em 0 1em;
