@@ -2,6 +2,29 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.3.0"></a>
+# [0.3.0](https://github.com/julie-ng/tidy-jsdoc/compare/v0.2.2...v0.3.0) (2018-12-15)
+
+
+### Bug Fixes
+
+* events layout, separate from method ([d868ea8](https://github.com/julie-ng/tidy-jsdoc/commit/d868ea8))
+* Events subheading style ([1156d36](https://github.com/julie-ng/tidy-jsdoc/commit/1156d36))
+* missing event colors in navigation ([6d74973](https://github.com/julie-ng/tidy-jsdoc/commit/6d74973))
+
+
+### Features
+
+* **class:** do not repeat properties in constructor ([64bb854](https://github.com/julie-ng/tidy-jsdoc/commit/64bb854))
+* **events:** in navigation, list under parent classes ([4c57bcf](https://github.com/julie-ng/tidy-jsdoc/commit/4c57bcf))
+* **header:** link title to main page ([f0b7bee](https://github.com/julie-ng/tidy-jsdoc/commit/f0b7bee))
+* **main-page:** assume readme, add basic styles ([e6ec9f6](https://github.com/julie-ng/tidy-jsdoc/commit/e6ec9f6))
+* **nav:** add parentheses to functions and style ([9c75f84](https://github.com/julie-ng/tidy-jsdoc/commit/9c75f84))
+* **tables:** a little more compact ([da661e2](https://github.com/julie-ng/tidy-jsdoc/commit/da661e2))
+* **typography:** lighter param name background ([1a2d9b7](https://github.com/julie-ng/tidy-jsdoc/commit/1a2d9b7))
+
+
+
 <a name="0.2.2"></a>
 ## [0.2.2](https://github.com/julie-ng/tidy-jsdoc/compare/v0.2.1...v0.2.2) (2018-11-22)
 
