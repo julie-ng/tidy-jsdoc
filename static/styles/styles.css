@@ -3390,9 +3390,12 @@ pre.line-numbers > code {
   .nav-item-type.type-namespace {
     color: #eb6420;
     background-color: #fad8c7; }
-  .nav-item-type.type-variable {
+  .nav-item-type.type-module {
     color: #964cb1;
     background-color: #f2e4f7; }
+  .nav-item-type.type-event {
+    color: #948b34;
+    background-color: #fff6a6; }
 
 h5 {
   margin: 0;

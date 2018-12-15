@@ -136,9 +136,13 @@ $nav-width: 280px;
     background-color: #fad8c7;
   }
 
-  &.type-variable {
-    // purple
+  &.type-module {
     color: #964cb1;
     background-color: #f2e4f7;
+  }
+
+  &.type-event {
+    color: #948b34;
+    background-color: #fff6a6;
   }
 }
