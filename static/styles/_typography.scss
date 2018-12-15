@@ -36,6 +36,7 @@ code {
 	border-left: 6px solid #eb2f06;
 	background: #f7f7f7;
 
+	& + .event,
   & + .method {
     border-top: none;
     padding-top: 0;

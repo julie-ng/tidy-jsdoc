@@ -3422,6 +3422,7 @@ code {
   padding: 0.35em 0.75em;
   border-left: 6px solid #eb2f06;
   background: #f7f7f7; }
+  .subtitle + .event,
   .subtitle + .method {
     border-top: none;
     padding-top: 0; }
