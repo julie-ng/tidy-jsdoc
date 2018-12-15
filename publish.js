@@ -304,6 +304,7 @@ function buildMemberNav(items, itemHeading, itemsSeen, linktoFn) {
         items.forEach(function (item) {
             var methods = find({ kind: "function", memberof: item.longname })
             var members = find({ kind: "member", memberof: item.longname })
+            var events = find({ kind: "event", memberof: item.longname })
             var displayName
 
             if (!hasOwnProp.call(item, "longname")) {
@@ -340,6 +341,15 @@ function buildMemberNav(items, itemHeading, itemsSeen, linktoFn) {
                             return
                         }
                         nav.push(buildNavItem(buildNavType(method.kind, linkto(method.longname, method.name + '<span class="method-parens">()</span>'))))
+                    })
+                }
+
+                if (events.length) {
+                    events.forEach(function (event) {
+                        if (event.inherited && conf.showInheritedInNav === false) {
+                            return
+                        }
+                        nav.push(buildNavItem(buildNavType(event.kind, linkto(event.longname, event.name))))
                     })
                 }
 
@@ -384,11 +394,15 @@ function buildNav(members) {
     var seen = {};
     var seenTutorials = {};
 
+    // console.log('--- members ----');
+    // console.log(members.events);
+
+
+
     nav = nav.concat(buildMemberNav(members.tutorials, "Tutorials", seenTutorials, linktoTutorial));
     nav = nav.concat(buildMemberNav(members.classes, "Classes", seen, linkto));
     nav = nav.concat(buildMemberNav(members.modules, "Modules", {}, linkto));
     nav = nav.concat(buildMemberNav(members.externals, "Externals", seen, linktoExternal));
-    nav = nav.concat(buildMemberNav(members.events, "Events", seen, linkto));
     nav = nav.concat(buildMemberNav(members.namespaces, "Namespaces", seen, linkto));
     nav = nav.concat(buildMemberNav(members.mixins, "Mixins", seen, linkto));
     nav = nav.concat(buildMemberNav(members.interfaces, "Interfaces", seen, linkto));
