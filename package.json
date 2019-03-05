@@ -19,12 +19,12 @@
     "sass:watch": "gulp sass:watch"
   },
   "dependencies": {
-    "bootstrap": "^4.1.2",
     "jsdoc": "^3.4.3",
     "taffydb": "^2.7.3",
     "util": "^0.10.3"
   },
   "devDependencies": {
+    "bootstrap": "^4.3.1",
     "gulp": "^4.0.0",
     "gulp-sass": "^3.1.0",
     "standard-version": "^4.3.0"
