@@ -340,7 +340,7 @@ function buildMemberNav(items, itemHeading, itemsSeen, linktoFn) {
                         if (method.inherited && conf.showInheritedInNav === false) {
                             return
                         }
-                        nav.push(buildNavItem(buildNavType(method.kind, linkto(method.longname, method.name + '<span class="method-parens">()</span>'))))
+                        nav.push(buildNavItem(buildNavType(method.kind, linkto(method.longname, method.name))))
                     })
                 }
 
