@@ -28,8 +28,11 @@ var self = this;
     </div>
 
     <h4 class="method-name" id="<?js= id ?>"><?js= (kind === 'class' ? 'new ' : '') +
-    name + (data.signature || '') ?></h4>
+    name + (data.signature || '') ?>
+    </h4>
 <?js } ?>
+
+
 
 <?js if (data.kind !== 'module' && data.description) { ?>
 <div class="method-description">
@@ -57,7 +60,7 @@ var self = this;
 <?js } ?>
 
 <?js if (data.params && params.length) { ?>
-    <h4 class="method-params-heading">Parameters</h4>
+    <h4 class="method-heading">Parameters</h4>
     <?js= this.partial('params.tmpl', params) ?>
 <?js } ?>
 

@@ -2,7 +2,6 @@ h1 {
 	font-size: 2rem;
 }
 
-// Headings: parameters, extends…
 h5 {
   margin: 0;
   font-weight: 500;
@@ -13,78 +12,28 @@ h5 {
   }
 }
 
-code {
-  color: #888;
-}
-
 .page-kind {
-	font-weight: 300;
-	color: #999;
-	margin: 0;
+	margin: 0 0 -0.5em;
+	font-weight: 400;
+	color: var(--light-font-color);
 	text-transform: uppercase;
 }
 
-// .subsection-title {
-//   color: #e74c3c;
-// }
-
-.event-name,
-.method-name {
-	// color: #079992;
-	color: #eb2f06;
+.page-title {
+	margin-top: 0;
 }
 
 .subtitle {
-  margin: 2em 0;
-	padding: 0.35em 0.75em;
-	border-left: 6px solid #eb2f06;
-	background: #f7f7f7;
+	font-weight: 600;
+	font-size: 1.5em;
+	color: var(--text-color);
+	margin: 1em 0;
+	padding: 0.4em 0;
+	border-bottom: 1px solid var(--border-color);
 
 	& + .event,
   & + .method {
     border-top: none;
     padding-top: 0;
   }
-}
-
-.source-page {
-	font-size: 14px;
-
-	code {
-		z-index: 1;
-	}
-
-	.line-height.temporary {
-		z-index: 0;
-	}
-}
-
-// .method-parens {
-// 	display: inline-block;
-// 	padding-left: 1px;
-// 	letter-spacing: 1px;
-// 	color: #c0c0c0;
-// }
-
-pre {
-	&.source {
-		background: #f1f2f3;
-		padding: 1rem;
-	}
-}
-
-.readme {
-	h2 {
-		border-bottom: 1px solid #ddd;
-		margin: 1em 0;
-		padding-bottom: 0.5rem;
-
-		& + h3 {
-			margin-top: 0;
-		}
-	}
-
-	h3 {
-		margin: 2rem 0 1rem 0;
-	}
 }
