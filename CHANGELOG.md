@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [1.0.0](https://github.com/julie-ng/tidy-jsdoc/compare/v0.3.2...v1.0.0) (2019-06-02)
+
+
+### Bug Fixes
+
+* **type-defs:** duplicate description, [#3](https://github.com/julie-ng/tidy-jsdoc/issues/3) ([907d9e1](https://github.com/julie-ng/tidy-jsdoc/commit/907d9e1))
+* **type-defs:** include properties, closes [#3](https://github.com/julie-ng/tidy-jsdoc/issues/3) ([3423093](https://github.com/julie-ng/tidy-jsdoc/commit/3423093))
+
+
+### Features
+
+* **css:** allow user adjustments via css variable overrides ([2bb0d80](https://github.com/julie-ng/tidy-jsdoc/commit/2bb0d80))
+* **css:** remove bootstrap dependencies ([8e6abd2](https://github.com/julie-ng/tidy-jsdoc/commit/8e6abd2))
+* **design, css:** re-design and refactor css ([08ceb04](https://github.com/julie-ng/tidy-jsdoc/commit/08ceb04))
+* **nav:** remove method parens, visual noise ([5a8e964](https://github.com/julie-ng/tidy-jsdoc/commit/5a8e964))
+
+
+
 ## [0.3.2](https://github.com/julie-ng/tidy-jsdoc/compare/v0.3.1...v0.3.2) (2019-06-01)
 
 ### Dependencies
