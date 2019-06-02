@@ -20,7 +20,7 @@ Note Latest Version 1.0 is considered a _breaking change_ because the design cha
 - [Newton Graph Library](https://julie-ng.github.io/newtonjs-graph/)
 - Using tidy-jsdoc? Open an issue to add your documentation here.
 
-<img src="./images/v1-preview-newtonjs.png" alt="Version 1.0 - Preview" width="600" style="max-width:100%;">
+<img src="./images/v1-preview-newtonjs.png" alt="Version 1.0 - Preview" style="max-width:100%;">
 
 Based on the [default jsdoc template](https://github.com/jsdoc/jsdoc/tree/master/templates) and inspired in design by [vue.js documentation](https://vuejs.org/v2/api/) and [docsify](https://docsify.js.org).
 
@@ -66,37 +66,37 @@ Then configure jsdoc to use the tidy template. Below is an example `jsdoc.json` 
 
 ```javascript
 {
-	"tags": {
-		"allowUnknownTags": true,
-		"dictionaries": [
-			"jsdoc",
-			"closure"
-		]
-	},
-	"source": {
-		"include": [
-			"src"
-		],
-		"includePattern": ".+\\.js(doc)?$",
-		"excludePattern": "(^|\\/|\\\\)_"
-	},
-	"opts": {
-		"template": "./node_modules/tidy-jsdoc",
-		"encoding": "utf8",
-		"destination": "./docs/",
-		"recurse": true
-	},
-	"plugins": [
-		"plugins/markdown",
-		"plugins/summarize"
-	],
-	"templates": {
-		"cleverLinks": false,
-		"monospaceLinks": false
-	},
-	"metadata": {
-		"title": "My JavaScript Library",
-	}
+  "tags": {
+    "allowUnknownTags": true,
+    "dictionaries": [
+      "jsdoc",
+      "closure"
+    ]
+  },
+  "source": {
+    "include": [
+      "src"
+    ],
+    "includePattern": ".+\\.js(doc)?$",
+    "excludePattern": "(^|\\/|\\\\)_"
+  },
+  "opts": {
+    "template": "./node_modules/tidy-jsdoc",
+    "encoding": "utf8",
+    "destination": "./docs/",
+    "recurse": true
+  },
+  "plugins": [
+    "plugins/markdown",
+    "plugins/summarize"
+  ],
+  "templates": {
+    "cleverLinks": false,
+    "monospaceLinks": false
+  },
+  "metadata": {
+    "title": "My JavaScript Library",
+  }
 }
 ```
 
@@ -108,12 +108,12 @@ As of version 1.0, this template is styled via css variabbles, so you can adjust
 
 ```javascript
 {
-	"metadata": "...",
-	"styles": {
-		"text-color": "#111",		
-		"primary-color": "blue",
-		"heading-color": "var(--primary-color)"
-	}	
+  "metadata": "...",
+  "styles": {
+    "text-color": "#111",		
+    "primary-color": "blue",
+    "heading-color": "var(--primary-color)"
+  }	
 }
 ```
 
@@ -121,11 +121,11 @@ This would output in your document `<head>`:
 
 ```html
 <style>
-	:root {
-		--text-color: #111;
-		--primary-color: blue;
-		--heading-color: var(--primary-color);
-	}
+  :root {
+    --text-color: #111;
+    --primary-color: blue;
+    --heading-color: var(--primary-color);
+  }
 <style>
 ```
 The keys and values are arbitrary, but the CSS should be valid. For a full list of the available variables, see [_vars.scss](./static/styles/_vars.scss).
