@@ -14,8 +14,7 @@ if (data.defaultvalue && (data.defaultvaluetype === 'object' || data.defaultvalu
     if (properties && properties.length && properties.forEach && !data.hideconstructor && data.kind !== 'class') {
 ?>
 
-    <h5>Properties:</h5>
-
+    <h4 class="method-heading">Properties</h4>
     <?js= this.partial('properties.tmpl', data) ?>
 
 <?js } ?>
@@ -31,27 +30,27 @@ if (data.defaultvalue && (data.defaultvaluetype === 'object' || data.defaultvalu
 
 <div class="details">
     <?js if (data.version) {?>
-        <h4 class="method-heading">Version:</h4>
+        <h4 class="method-heading">Version</h4>
         <ul><li><?js= version ?></li></ul>
     <?js } ?>
 
     <?js if (data.since) {?>
-        <h4 class="method-heading">Since:</h4>
+        <h4 class="method-heading">Since</h4>
         <ul><li><?js= since ?></li></ul>
     <?js } ?>
 
     <?js if (data.inherited && data.inherits && !data.overrides) { ?>
-        <h4 class="method-heading">Inherited From:</h4>
+        <h4 class="method-heading">Inherited From</h4>
         <ul><li><?js= this.linkto(data.inherits, this.htmlsafe(data.inherits)) ?></li></ul>
     <?js } ?>
 
     <?js if (data.overrides) { ?>
-        <h4 class="method-heading">Overrides:</h4>
+        <h4 class="method-heading">Overrides</h4>
         <ul><li><?js= this.linkto(data.overrides, this.htmlsafe(data.overrides)) ?></li></ul>
     <?js } ?>
 
     <?js if (data.implementations && data.implementations.length) { ?>
-        <h4 class="method-heading">Implementations:</h4>
+        <h4 class="method-heading">Implementations</h4>
         <ul>
             <?js data.implementations.forEach(function(impl) { ?>
                 <li><?js= self.linkto(impl, self.htmlsafe(impl)) ?></li>
@@ -60,7 +59,7 @@ if (data.defaultvalue && (data.defaultvaluetype === 'object' || data.defaultvalu
     <?js } ?>
 
     <?js if (data.implements && data.implements.length) { ?>
-        <h4 class="method-heading">Implements:</h4>
+        <h4 class="method-heading">Implements</h4>
         <ul>
             <?js data.implements.forEach(function(impl) { ?>
                 <li><?js= self.linkto(impl, self.htmlsafe(impl)) ?></li>
@@ -69,7 +68,7 @@ if (data.defaultvalue && (data.defaultvaluetype === 'object' || data.defaultvalu
     <?js } ?>
 
     <?js if (data.mixes && data.mixes.length) { ?>
-        <h4 class="method-heading">Mixes In:</h4>
+        <h4 class="method-heading">Mixes In</h4>
         <ul>
         <?js data.mixes.forEach(function(a) { ?>
             <li><?js= self.linkto(a, a) ?></li>
@@ -78,7 +77,7 @@ if (data.defaultvalue && (data.defaultvaluetype === 'object' || data.defaultvalu
     <?js } ?>
 
     <?js if (data.deprecated) { ?>
-        <h4 class="method-heading">Deprecated:</h4>
+        <h4 class="method-heading">Deprecated</h4>
         <?js if (data.deprecated === true) { ?>
             <ul><li>Yes</li></ul>
         <?js } else { ?>
@@ -87,7 +86,7 @@ if (data.defaultvalue && (data.defaultvaluetype === 'object' || data.defaultvalu
     <?js } ?>
 
     <?js if (data.author && author.length) {?>
-        <h4 class="method-heading">Author:</h4>
+        <h4 class="method-heading">Author</h4>
         <ul>
             <?js author.forEach(function(a) { ?>
                 <li><?js= self.resolveAuthorLinks(a) ?></li>
@@ -96,21 +95,21 @@ if (data.defaultvalue && (data.defaultvaluetype === 'object' || data.defaultvalu
     <?js } ?>
 
     <?js if (data.copyright) {?>
-        <h4 class="method-heading">Copyright:</h4>
+        <h4 class="method-heading">Copyright</h4>
         <ul>
             <li><?js= copyright ?></li>
         </ul>
     <?js } ?>
 
     <?js if (data.license) {?>
-        <h4 class="method-heading">License:</h4>
+        <h4 class="method-heading">License</h4>
         <ul>
             <li><?js= license ?></li>
         </ul>
     <?js } ?>
 
     <?js if (data.defaultvalue) {?>
-        <h4 class="method-heading">Default Value:</h4>
+        <h4 class="method-heading">Default Value</h4>
         <ul>
             <li<?js= defaultObjectClass ?>>
                 <?js= data.defaultvalue ?>
@@ -119,7 +118,7 @@ if (data.defaultvalue && (data.defaultvaluetype === 'object' || data.defaultvalu
     <?js } ?>
 
     <?js if (data.tutorials && tutorials.length) {?>
-        <h4 class="method-heading">Tutorials:</h4>
+        <h4 class="method-heading">Tutorials</h4>
         <ul>
             <?js tutorials.forEach(function(t) { ?>
                 <li><?js= self.tutoriallink(t) ?></li>
@@ -128,7 +127,7 @@ if (data.defaultvalue && (data.defaultvaluetype === 'object' || data.defaultvalu
     <?js } ?>
 
     <?js if (data.see && see.length) {?>
-        <h4 class="method-heading">See:</h4>
+        <h4 class="method-heading">See</h4>
         <ul>
             <?js see.forEach(function(s) { ?>
                 <li><?js= self.linkto(s) ?></li>
@@ -137,7 +136,7 @@ if (data.defaultvalue && (data.defaultvaluetype === 'object' || data.defaultvalu
     <?js } ?>
 
     <?js if (data.todo && todo.length) {?>
-        <h4 class="method-heading">To Do:</h4>
+        <h4 class="method-heading">To Do</h4>
         <ul><?js todo.forEach(function(t) { ?>
             <li><?js= t ?></li>
         <?js }); ?></ul>
