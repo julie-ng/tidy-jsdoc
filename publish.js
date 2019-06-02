@@ -340,7 +340,7 @@ function buildMemberNav(items, itemHeading, itemsSeen, linktoFn) {
                         if (method.inherited && conf.showInheritedInNav === false) {
                             return
                         }
-                        nav.push(buildNavItem(buildNavType(method.kind, linkto(method.longname, method.name + '<span class="method-parens">()</span>'))))
+                        nav.push(buildNavItem(buildNavType(method.kind, linkto(method.longname, method.name))))
                     })
                 }
 
@@ -397,8 +397,6 @@ function buildNav(members) {
     // console.log('--- members ----');
     // console.log(members.events);
 
-
-
     nav = nav.concat(buildMemberNav(members.tutorials, "Tutorials", seenTutorials, linktoTutorial));
     nav = nav.concat(buildMemberNav(members.classes, "Classes", seen, linkto));
     nav = nav.concat(buildMemberNav(members.modules, "Modules", {}, linkto));
@@ -411,7 +409,7 @@ function buildNav(members) {
         nav.push(buildNavHeading(linkto('global', 'Globals')))
 
         members.globals.forEach(function (item) {
-            if (item.kind !== "typedef" && !hasOwnProp.call(seen, item.longname)) {
+            if (!hasOwnProp.call(seen, item.longname)) {
                 nav.push(buildNavItem(buildNavType(item.kind, linkto(item.longname, item.name))))
             }
 

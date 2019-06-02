@@ -3,10 +3,10 @@ var data = obj;
 var self = this;
 ?>
 
-<h4 class="name" id="<?js= id ?>"><?js= data.attribs + name + (data.signature ? data.signature : '') ?></h4>
+<h3 class="type-definition-name" id="<?js= id ?>"><?js= data.attribs + name + (data.signature ? data.signature : '') ?></h3>
 
-<?js if (data.summary) { ?>
-<p class="summary"><?js= summary ?></p>
+<?js if (data.summary && !data.description.includes(data.summary)) { ?>
+<p class="summary"><?js= data.summary ?></p>
 <?js } ?>
 
 <?js if (data.description) { ?>
@@ -16,7 +16,7 @@ var self = this;
 <?js } ?>
 
 <?js if (data.type && data.type.names) {?>
-    <h5>Type:</h5>
+    <h4 class="method-heading">Type</h4>
     <ul>
         <li>
             <?js= self.partial('type.tmpl', data.type.names) ?>
@@ -24,16 +24,16 @@ var self = this;
     </ul>
 <?js } ?>
 
-<?js this.partial('details.tmpl', data) ?>
+<?js= this.partial('details.tmpl', data) ?>
 
 <?js if (data.fires && fires.length) { ?>
-    <h5>Fires:</h5>
+    <h4 class="method-heading">Fires</h4>
     <ul><?js fires.forEach(function(f) { ?>
         <li><?js= self.linkto(f) ?></li>
     <?js }); ?></ul>
 <?js } ?>
 
 <?js if (data.examples && examples.length) { ?>
-    <h5>Example<?js= examples.length > 1? 's':'' ?></h5>
+    <h4 class="method-heading">Example<?js= examples.length > 1? 's':'' ?></h4>
     <?js= this.partial('examples.tmpl', examples) ?>
 <?js } ?>
