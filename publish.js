@@ -397,8 +397,6 @@ function buildNav(members) {
     // console.log('--- members ----');
     // console.log(members.events);
 
-
-
     nav = nav.concat(buildMemberNav(members.tutorials, "Tutorials", seenTutorials, linktoTutorial));
     nav = nav.concat(buildMemberNav(members.classes, "Classes", seen, linkto));
     nav = nav.concat(buildMemberNav(members.modules, "Modules", {}, linkto));
