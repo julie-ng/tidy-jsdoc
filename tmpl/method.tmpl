@@ -116,6 +116,15 @@ var self = this;
     <?js });
 } } ?>
 
+<?js if (data.meta && self.outputSourceFiles) {?>
+    <h4 class="method-heading">Source</h4>
+    <ul>
+        <li class="method-source">
+            <?js= self.linkto(meta.shortpath) ?><?js= self.linkto(meta.shortpath, ', line ' + meta.lineno, null, 'source.' + meta.lineno) ?>
+        </li>
+    </ul>
+<?js } ?>
+
 <?js if (data.kind !== 'module' && data.kind !== 'class' ) { ?>
     </article>
 <?js } ?>
