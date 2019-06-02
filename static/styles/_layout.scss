@@ -46,6 +46,8 @@
 }
 
 .layout-nav {
+  margin-bottom: 2rem;
+
   ul {
     margin: 0 0 2em;
     padding: 0;
@@ -81,15 +83,12 @@
 
 .nav-heading {
   margin-top: 1em;
+  font-weight: 500;
 
-  .nav-item-name {
-    font-weight: 500;
-
-    a {
+  a {
+    color: var(--text-color);
+    &:link, &:visited {
       color: var(--text-color);
-      &:link, &:visited {
-        color: var(--text-color);
-      }
     }
   }
 
@@ -109,17 +108,20 @@
   text-align: center;
   border-radius: 0.2em;
   margin-right: 0.5em;
+  margin-left: 1em;
 
   &.type-class {
+    display: none;
+  }
+
+  &.type-typedef {
     color: #39b739;
     background-color: #d5efd5;
-    display: none;
   }
 
   &.type-function {
     color: #549ab9;
     background-color: #e1f6ff;
-    margin-left: 1em;
   }
 
   &.type-namespace {
@@ -127,6 +129,7 @@
     background-color: #fad8c7;
   }
 
+  &.type-member,
   &.type-module {
     color: #964cb1;
     background-color: #f2e4f7;

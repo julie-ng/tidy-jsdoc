@@ -11,29 +11,6 @@ article {
   }
 }
 
-.event-name,
-.method-name {
-  margin: 1em 0;
-  font-size: 1.4rem;
-  font-family: var(--code-font);
-  font-weight: 600;
-  color: var(--secondary-color);
-
-  .return-type-signature {
-    color: #aaa;
-  }
-
-  // e.g. "opt"
-  .signature-attributes {
-    display: inline-block;
-    margin-left: 0.25em;
-    font-size: 60%;
-    color: #999;
-    font-style: italic;
-    font-weight: lighter;
-  }
-}
-
 .event-type,
 .method-type {
   .method-type-signature:not(:empty) {

@@ -409,7 +409,7 @@ function buildNav(members) {
         nav.push(buildNavHeading(linkto('global', 'Globals')))
 
         members.globals.forEach(function (item) {
-            if (item.kind !== "typedef" && !hasOwnProp.call(seen, item.longname)) {
+            if (!hasOwnProp.call(seen, item.longname)) {
                 nav.push(buildNavItem(buildNavType(item.kind, linkto(item.longname, item.name))))
             }
 
