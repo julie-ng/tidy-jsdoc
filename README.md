@@ -1,33 +1,70 @@
-# Tidy
+# tidy-jsdoc
 
 <a href="https://travis-ci.org/julie-ng/tidy-jsdoc" target="_blank">
   <img src="https://travis-ci.org/julie-ng/tidy-jsdoc.svg?branch=master">
 </a>
 
-A JSDoc3 template
+A minimalist and clearn [jsdoc](https://jsdoc.app/index.html) template. 
 
-Documentation doesn't have to be ugly and boring.
- Based on the default JSDoc 3 template, which uses:
-- [the Taffy Database library](http://taffydb.com/)
-- [Underscore Template library](http://underscorejs.org/)
+ ### Features
+
+ - Custom styles via [CSS variables](#adjusting-theme-with-css-variables)
+ - Code syntax highlighting via [Prism.js](https://prismjs.com/)
+
+## Preview
+
+Note Latest Version 1.0 is considered a _breaking change_ because the design changes significantly. 
+
+#### Examples
+
+- [Newton Graph Library](https://julie-ng.github.io/newtonjs-graph/)
+- Using tidy-jsdoc? Open an issue to add your documentation here.
+
+<img src="./images/v1-preview-newtonjs.png" alt="Version 1.0 - Preview" width="600" style="max-width:100%;">
+
+Based on the [default jsdoc template](https://github.com/jsdoc/jsdoc/tree/master/templates) and inspired in design by [vue.js documentation](https://vuejs.org/v2/api/) and [docsify](https://docsify.js.org).
+
+#### Looking for the old design?
+
+If you want keep the old design, version your `package.json` appropriately. Preview old designs in the [images folder](./images/).
+
+Note: the old designs ^0.3.0 will not be updated or maintained.
 
 ## Usage
 
-### 1. Add Dependency
+### Add Dependency
 
-To use this jsdoc template in a project, first install the package:
+To use this jsdoc template in a project, first install the packages:
 
 ```
-npm install --save-dev tidy-jsdoc
+npm install --save-dev jsdoc tidy-jsdoc
 ```
 
-### 2. Configure JSDoc
+### Generate Docs
 
-Then in your `jsdoc.json` configuration file, change the template options to `node_modules/tidy-jsdoc`.
+Once you've configured jsdoc and added syntax to your JavaScript files, you can generate the HTML files like so, optionally including a readme file:
 
-Here is an example `jsdoc.json`:
+```
+jsdoc --readme README.md -c jsdoc.json
+```
 
-```json
+### Configure JSDoc
+
+Then configure jsdoc to use the tidy template. Below is an example `jsdoc.json` configuration file. Be sure to adjust
+
+- **template**  
+	Points to `./node_modules/tidy-jsdoc`
+
+- **destination**  
+	Output is `./docs/`, allowing for easy GitHub Pages publishing.
+
+- **metadata**  
+	Customize title, logo, etc.
+
+- **styles**  
+	Let's your customize colors, etc. See details below.
+
+```javascript
 {
 	"tags": {
 		"allowUnknownTags": true,
@@ -63,11 +100,13 @@ Here is an example `jsdoc.json`:
 }
 ```
 
+## Customize the Template
+
 ### Adjusting Theme with CSS variables
 
-As of version 1.0, this template is styled via css variabbles, so you can adjust it to your brand. Inside your `jsdoc.json` configuration file, add an addional `styles` property:
+As of version 1.0, this template is styled via css variabbles, so you can adjust it to your brand. Inside your `jsdoc.json` configuration file, add an addional `styles` property, for example:
 
-```json
+```javascript
 {
 	"metadata": "...",
 	"styles": {
@@ -89,30 +128,17 @@ This would output in your document `<head>`:
 	}
 <style>
 ```
-The keys and values are arbitrary, but CSS should be valid.
+The keys and values are arbitrary, but the CSS should be valid. For a full list of the available variables, see [_vars.scss](./static/styles/_vars.scss).
 
-### 3. Generate Docs
-
-Then generate documentation referring this template:
-
-```
-jsdoc --readme README.md -c jsdoc.json
-```
-
-## Preview
-
-The following documentation were generated for an internal library used for work.
-
-<img src="./images/v0.2-preview-1.png" alt="v0.2.0 Preview" width="600" style="max-width:100%">
-
-<img src="./images/v0.2-preview-2.png" alt="v0.2.0 Preview with source code" width="600" style="max-width:100%">
 
 ## Development
 
-This is a bootstrap based template, so when working with sass, you can automatically build the CSS like so:
+For more information about creating jsdoc templates, see the [jsdoc GitHub repository](https://github.com/jsdoc/jsdoc/tree/master/templates).
+
+When editing SCSS, build the CSS automatically like so:
 
 ```
 npm run sass:watch
 ```
 
-Note: you'll have to commit both the scss and css files.
+Note: you'll have to commit **both** the scss and css files.
