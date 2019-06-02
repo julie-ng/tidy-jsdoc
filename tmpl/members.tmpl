@@ -5,8 +5,8 @@ var self = this;
 
 <h4 class="name" id="<?js= id ?>"><?js= data.attribs + name + (data.signature ? data.signature : '') ?></h4>
 
-<?js if (data.summary) { ?>
-<p class="summary"><?js= summary ?></p>
+<?js if (data.summary && !data.description.includes(data.summary)) { ?>
+<p class="summary"><?js= data.summary ?></p>
 <?js } ?>
 
 <?js if (data.description) { ?>
