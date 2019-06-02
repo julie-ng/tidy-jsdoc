@@ -4,6 +4,17 @@
     <meta charset="utf-8">
     <title><?js= env.conf.metadata.title ?>: <?js= title ?></title>
     <link type="text/css" rel="stylesheet" href="styles/styles.css">
+    <?js if (env.conf.hasOwnProperty('styles')) { ?>
+    <?js var styles = env.conf.styles; ?>
+    <style>
+      :root {
+      <?js for (var key in styles) { ?>
+      <?js if (styles.hasOwnProperty(key)) { ?>
+        --<?js= key + ': ' + styles[key] ?>;
+      <?js } } ?>
+      }
+    </style>
+    <?js } ?>
 </head>
 <body>
 

@@ -59,13 +59,37 @@ Here is an example `jsdoc.json`:
 	},
 	"metadata": {
 		"title": "My JavaScript Library",
-		"header": {
-			"background": "#333333",
-			"color": "#ffffff"
-		}
 	}
 }
 ```
+
+### Adjusting Theme with CSS variables
+
+As of version 1.0, this template is styled via css variabbles, so you can adjust it to your brand. Inside your `jsdoc.json` configuration file, add an addional `styles` property:
+
+```json
+{
+	"metadata": "...",
+	"styles": {
+		"text-color": "#111",		
+		"primary-color": "blue",
+		"heading-color": "var(--primary-color)"
+	}	
+}
+```
+
+This would output in your document `<head>`:
+
+```html
+<style>
+	:root {
+		--text-color: #111;
+		--primary-color: blue;
+		--heading-color: var(--primary-color);
+	}
+<style>
+```
+The keys and values are arbitrary, but CSS should be valid.
 
 ### 3. Generate Docs
 
