@@ -137,32 +137,13 @@
             if (members && members.length && members.forEach) {
                 var hasProperties = members[0].properties && members[0].properties.length && members[0].properties.forEach;
         ?>
+    <?js } ?>
 
-        <?js if (hasProperties) { ?>
-            <h3 class="subtitle">Properties</h3>
-            <ul class="properties">
-        <?js } ?>
-
-        <?js members.forEach(function(p) {
-            if (p.properties && p.properties.length && p.properties.forEach) {
-                var prop = p.properties[0];
-        ?>
-            <li>
-                <code class="param-name"><?js= prop.name ?></code>
-                <?js if (prop.type && prop.type.names) {?>
-                    <div class="param-types">
-                        <?js= self.partial('type.tmpl', prop.type.names) ?>
-                    </div>
-                <?js } ?>
-                <div class="param-description"><?js= prop.name ?></div>
-            </li>
-            <?js }
-        }); ?>
-
-        <?js if (hasProperties) { ?>
-        </ul>
-        <?js } ?>
-
+    <?js if (hasProperties) { ?>
+        <h3 class="subtitle">Properties</h3>
+        <?js members.forEach(function(p) { ?>
+            <?js= self.partial('properties.tmpl', p) ?>
+        <?js }) ?>
     <?js } ?>
 
     <?js
