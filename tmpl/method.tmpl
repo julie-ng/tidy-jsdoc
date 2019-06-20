@@ -91,14 +91,14 @@ var self = this;
 <?js } ?>
 
 <?js if (data.listens && listens.length) { ?>
-<h4 class="method-heading">Listens to Events</h4>
+<h4 class="method-heading">Listens to events</h4>
 <ul><?js listens.forEach(function(f) { ?>
     <li><?js= self.linkto(f) ?></li>
 <?js }); ?></ul>
 <?js } ?>
 
 <?js if (data.listeners && listeners.length) { ?>
-<h4 class="method-heading">Listeners of This Event</h4>
+<h4 class="method-heading">Listeners of this event</h4>
 <ul><?js listeners.forEach(function(f) { ?>
     <li><?js= self.linkto(f) ?></li>
 <?js }); ?></ul>
