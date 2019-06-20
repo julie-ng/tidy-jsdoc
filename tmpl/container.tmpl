@@ -126,18 +126,18 @@
     <?js } ?>
 
     <?js
-            var members = self.find({kind: 'member', memberof: isGlobalPage ? {isUndefined: true} : doc.longname});
+        var members = self.find({kind: 'member', memberof: isGlobalPage ? {isUndefined: true} : doc.longname});
 
-            // symbols that are assigned to module.exports are not globals, even though they're not a memberof anything
-            if (isGlobalPage && members && members.length && members.forEach) {
-                members = members.filter(function(m) {
-                    return m.longname && m.longname.indexOf('module:') !== 0;
-                });
-            }
-            if (members && members.length && members.forEach) {
-                var hasProperties = members[0].properties && members[0].properties.length && members[0].properties.forEach;
-        ?>
-    <?js } ?>
+        // symbols that are assigned to module.exports are not globals, even though they're not a memberof anything
+        if (isGlobalPage && members && members.length && members.forEach) {
+            members = members.filter(function(m) {
+                return m.longname && m.longname.indexOf('module:') !== 0;
+            });
+        }
+        if (members && members.length && members.forEach) {
+            var hasProperties = members[0].properties && members[0].properties.length && members[0].properties.forEach;
+        }
+    ?>
 
     <?js if (hasProperties) { ?>
         <h3 class="subtitle">Properties</h3>
