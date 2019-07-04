@@ -16,12 +16,15 @@
   "scripts": {
     "release": "standard-version",
     "sass": "gulp sass",
-    "sass:watch": "gulp sass:watch"
+    "sass:watch": "gulp sass:watch",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "dependencies": {
     "jsdoc": "^3.6.2",
     "taffydb": "^2.7.3",
-    "util": "^0.10.3"
+    "util": "^0.10.3",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "bootstrap": "^4.3.1",
@@ -30,5 +33,6 @@
     "standard-version": "^5.0.1",
     "marked": " >=0.6.2",
     "tar": " >=4.4.2"
-  }
+  },
+  "snyk": true
 }
