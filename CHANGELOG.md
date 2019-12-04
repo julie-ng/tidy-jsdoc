@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [1.1.0](https://github.com/julie-ng/tidy-jsdoc/compare/v1.0.0...v1.1.0) (2019-12-04)
+
+### Dependencies
+
+- **handlebars**: updated per audit ( [3f9a8b8](https://github.com/julie-ng/tidy-jsdoc/commit/3f9a8b8))
+- **handlebars**: updated per audit [6f6e7a2](https://github.com/julie-ng/tidy-jsdoc/commit/6f6e7a2))
+- **jsdoc**: updated per audit ([c6c0fee](https://github.com/julie-ng/tidy-jsdoc/commit/c6c0fee))
+
+### Bug Fixes
+
+* **class:** show properties, [#5](https://github.com/julie-ng/tidy-jsdoc/issues/5) ([3bccee0](https://github.com/julie-ng/tidy-jsdoc/commit/3bccee0))
+* **headings:** styles consistency ([ea6fd8c](https://github.com/julie-ng/tidy-jsdoc/commit/ea6fd8c))
+
+
+
 # [1.0.0](https://github.com/julie-ng/tidy-jsdoc/compare/v0.3.2...v1.0.0) (2019-06-02)
 
 
