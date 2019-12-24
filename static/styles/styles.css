@@ -1,188 +1,3 @@
-@charset "UTF-8";
-/* PrismJS 1.16.0
-https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+clike+javascript+json&plugins=line-highlight+line-numbers */
-/**
- * prism.js tomorrow night eighties for JavaScript, CoffeeScript, CSS and HTML
- * Based on https://github.com/chriskempson/tomorrow-theme
- * @author Rose Pritchard
- */
-code[class*="language-"],
-pre[class*="language-"] {
-  color: #ccc;
-  background: none;
-  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-  font-size: 1em;
-  text-align: left;
-  white-space: pre;
-  word-spacing: normal;
-  word-break: normal;
-  word-wrap: normal;
-  line-height: 1.5;
-  -moz-tab-size: 4;
-  -o-tab-size: 4;
-  tab-size: 4;
-  -webkit-hyphens: none;
-  -moz-hyphens: none;
-  -ms-hyphens: none;
-  hyphens: none; }
-
-/* Code blocks */
-pre[class*="language-"] {
-  padding: 1em;
-  margin: .5em 0;
-  overflow: auto; }
-
-:not(pre) > code[class*="language-"],
-pre[class*="language-"] {
-  background: #2d2d2d; }
-
-/* Inline code */
-:not(pre) > code[class*="language-"] {
-  padding: .1em;
-  border-radius: .3em;
-  white-space: normal; }
-
-.token.comment,
-.token.block-comment,
-.token.prolog,
-.token.doctype,
-.token.cdata {
-  color: #999; }
-
-.token.punctuation {
-  color: #ccc; }
-
-.token.tag,
-.token.attr-name,
-.token.namespace,
-.token.deleted {
-  color: #e2777a; }
-
-.token.function-name {
-  color: #6196cc; }
-
-.token.boolean,
-.token.number,
-.token.function {
-  color: #f08d49; }
-
-.token.property,
-.token.class-name,
-.token.constant,
-.token.symbol {
-  color: #f8c555; }
-
-.token.selector,
-.token.important,
-.token.atrule,
-.token.keyword,
-.token.builtin {
-  color: #cc99cd; }
-
-.token.string,
-.token.char,
-.token.attr-value,
-.token.regex,
-.token.variable {
-  color: #7ec699; }
-
-.token.operator,
-.token.entity,
-.token.url {
-  color: #67cdcc; }
-
-.token.important,
-.token.bold {
-  font-weight: bold; }
-
-.token.italic {
-  font-style: italic; }
-
-.token.entity {
-  cursor: help; }
-
-.token.inserted {
-  color: green; }
-
-pre[data-line] {
-  position: relative;
-  padding: 1em 0 1em 3em; }
-
-.line-highlight {
-  position: absolute;
-  left: 0;
-  right: 0;
-  padding: inherit 0;
-  margin-top: 1em;
-  /* Same as .prism’s padding-top */
-  background: rgba(153, 122, 102, 0.08);
-  background: linear-gradient(to right, rgba(153, 122, 102, 0.1) 70%, rgba(153, 122, 102, 0));
-  pointer-events: none;
-  line-height: inherit;
-  white-space: pre; }
-
-.line-highlight:before,
-.line-highlight[data-end]:after {
-  content: attr(data-start);
-  position: absolute;
-  top: .4em;
-  left: .6em;
-  min-width: 1em;
-  padding: 0 .5em;
-  background-color: rgba(153, 122, 102, 0.4);
-  color: #f5f2f0;
-  font: bold 65%/1.5 sans-serif;
-  text-align: center;
-  vertical-align: .3em;
-  border-radius: 999px;
-  text-shadow: none;
-  box-shadow: 0 1px white; }
-
-.line-highlight[data-end]:after {
-  content: attr(data-end);
-  top: auto;
-  bottom: .4em; }
-
-.line-numbers .line-highlight:before,
-.line-numbers .line-highlight:after {
-  content: none; }
-
-pre[class*="language-"].line-numbers {
-  position: relative;
-  padding-left: 3.8em;
-  counter-reset: linenumber; }
-
-pre[class*="language-"].line-numbers > code {
-  position: relative;
-  white-space: inherit; }
-
-.line-numbers .line-numbers-rows {
-  position: absolute;
-  pointer-events: none;
-  top: 0;
-  font-size: 100%;
-  left: -3.8em;
-  width: 3em;
-  /* works for line-numbers below 1000 lines */
-  letter-spacing: -1px;
-  border-right: 1px solid #999;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none; }
-
-.line-numbers-rows > span {
-  pointer-events: none;
-  display: block;
-  counter-increment: linenumber; }
-
-.line-numbers-rows > span:before {
-  content: counter(linenumber);
-  color: #999;
-  display: block;
-  padding-right: 0.8em;
-  text-align: right; }
-
 :root {
   --primary-color: #0664a8;
   --secondary-color: #107e7d;
@@ -194,6 +9,8 @@ pre[class*="language-"].line-numbers > code {
   --text-color: #4a4a4a;
   --light-font-color: #999;
   --supporting-color: #7097b5;
+  --heading-color: var(--text-color);
+  --subheading-color: var(--secondary-color);
   --heading-background: #f7f7f7;
   --code-bg-color: #f8f8f8;
   --max-content-width: 900px;
@@ -349,7 +166,8 @@ code {
     text-decoration: underline; }
 
 h1 {
-  font-size: 2rem; }
+  font-size: 2rem;
+  color: var(--heading-color); }
 
 h5 {
   margin: 0;
@@ -370,7 +188,7 @@ h5 {
 .subtitle {
   font-weight: 600;
   font-size: 1.5em;
-  color: var(--text-color);
+  color: var(--subheading-color);
   margin: 1em 0;
   padding: 0.4em 0;
   border-bottom: 1px solid var(--border-color); }
@@ -386,7 +204,7 @@ h5 {
   font-size: 1.4rem;
   font-family: var(--code-font);
   font-weight: 600;
-  color: var(--secondary-color); }
+  color: var(--primary-color); }
   .event-name .return-type-signature,
   .method-name .return-type-signature,
   .type-definition-name .return-type-signature {
@@ -423,7 +241,8 @@ table {
 .readme h2 {
   border-bottom: 1px solid var(--border-color);
   margin: 1em 0;
-  padding-bottom: 0.5rem; }
+  padding-bottom: 0.5rem;
+  color: var(--subheading-color); }
   .readme h2 + h3 {
     margin-top: 0; }
 
@@ -438,11 +257,10 @@ article.event, article.method {
 .event-type .method-type-signature:not(:empty),
 .method-type .method-type-signature:not(:empty) {
   display: inline-block;
-  margin-bottom: 0.75em;
   background: #ecf0f1;
   color: #95a5a6;
   padding: 0.25em 0.5em 0.35em;
-  font-weight: lighter;
+  font-weight: 300;
   font-size: 0.8rem; }
 
 .method-heading {
