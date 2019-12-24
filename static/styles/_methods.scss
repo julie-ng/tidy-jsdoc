@@ -15,11 +15,10 @@ article {
 .method-type {
   .method-type-signature:not(:empty) {
     display: inline-block;
-    margin-bottom: 0.75em;
     background: #ecf0f1;
     color: #95a5a6;
     padding: 0.25em 0.5em 0.35em;
-    font-weight: lighter;
+    font-weight: 300;
     font-size: 0.8rem;
   }
 }
