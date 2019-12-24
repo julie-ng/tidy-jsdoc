@@ -1,5 +1,6 @@
 h1 {
-	font-size: 2rem;
+  font-size: 2rem;
+  color: var(--heading-color);
 }
 
 h5 {
@@ -26,7 +27,7 @@ h5 {
 .subtitle {
 	font-weight: 600;
 	font-size: 1.5em;
-	color: var(--text-color);
+  color: var(--subheading-color);
 	margin: 1em 0;
 	padding: 0.4em 0;
 	border-bottom: 1px solid var(--border-color);
@@ -45,7 +46,7 @@ h5 {
   font-size: 1.4rem;
   font-family: var(--code-font);
   font-weight: 600;
-  color: var(--secondary-color);
+  color: var(--primary-color);
 
   .return-type-signature {
     color: #aaa;
