@@ -54,6 +54,9 @@ Then configure jsdoc to use the tidy template. Below is an example `jsdoc.json` 
 - **template**  
 	Points to `./node_modules/tidy-jsdoc`
 
+- **prism-theme**  
+	Optionally pick a prismjs theme for styling your code. Defaults to "prism-tomorrow-night". Choose from templates available in [`./static/styles/vendor/`](./static/styles/vendor/) folder
+
 - **destination**  
 	Output is `./docs/`, allowing for easy GitHub Pages publishing.
 
@@ -81,6 +84,7 @@ Then configure jsdoc to use the tidy template. Below is an example `jsdoc.json` 
   },
   "opts": {
     "template": "./node_modules/tidy-jsdoc",
+    "prism-theme": "prism-custom",
     "encoding": "utf8",
     "destination": "./docs/",
     "recurse": true

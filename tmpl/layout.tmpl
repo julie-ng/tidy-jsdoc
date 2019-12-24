@@ -3,6 +3,11 @@
 <head>
     <meta charset="utf-8">
     <title><?js= env.conf.metadata.title ?>: <?js= title ?></title>
+    <?js if (env.conf.opts.hasOwnProperty('prism-theme')) { ?>
+      <link type="text/css" rel="stylesheet" href="styles/vendor/<?js= env.conf.opts['prism-theme'] ?>.css">
+    <?js } else { ?>
+      <link type="text/css" rel="stylesheet" href="styles/vendor/prism-tomorrow-night.css">
+    <?js } ?>
     <link type="text/css" rel="stylesheet" href="styles/styles.css">
     <?js if (env.conf.hasOwnProperty('styles')) { ?>
     <?js var styles = env.conf.styles; ?>
