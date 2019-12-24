@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [1.2.0](https://github.com/julie-ng/tidy-jsdoc/compare/v1.1.0...v1.2.0) (2019-12-24)
+
+
+### Bug Fixes
+
+* **styles:** method type typography contrast ([2de53a6](https://github.com/julie-ng/tidy-jsdoc/commit/2de53a6))
+
+
+### Features
+
+* **code-styles:** add prism-theme option ([8d4aa34](https://github.com/julie-ng/tidy-jsdoc/commit/8d4aa34))
+* **styles:** introduce heading and subheading colors and vars ([a5d29ca](https://github.com/julie-ng/tidy-jsdoc/commit/a5d29ca))
+
+
+
 # [1.1.0](https://github.com/julie-ng/tidy-jsdoc/compare/v1.0.0...v1.1.0) (2019-12-04)
 
 ### Dependencies
