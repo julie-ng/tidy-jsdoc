@@ -14,7 +14,7 @@
   ],
   "homepage": "https://github.com/julie-ng/tidy-jsdoc",
   "scripts": {
-    "release": "standard-version",
+    "release": "standard-version --sign",
     "sass": "gulp sass",
     "sass:watch": "gulp sass:watch",
     "preflight": "npm run sass & npm audit"
