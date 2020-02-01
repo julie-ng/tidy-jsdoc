@@ -16,7 +16,8 @@
   "scripts": {
     "release": "standard-version",
     "sass": "gulp sass",
-    "sass:watch": "gulp sass:watch"
+    "sass:watch": "gulp sass:watch",
+    "preflight": "npm run sass & npm audit"
   },
   "dependencies": {
     "jsdoc": "^3.6.3",
