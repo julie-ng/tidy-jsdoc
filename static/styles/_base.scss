@@ -44,3 +44,16 @@ code {
 	border-radius: 3px;
 	color: var(--code-attention-color);
 }
+
+.prettyprint {
+  &.source {
+    code {
+      &:not([class*="language-"]) {
+        display: block;
+        padding: 20px;
+        overflow: scroll;
+        color: var(--code-color);
+      }
+    }
+  }
+}
