@@ -67,6 +67,22 @@ var self = this;
 
 <?js= this.partial('details.tmpl', data) ?>
 
+<?js if (data.returns ) { ?>
+    <?js= console.log(data.returns) ?>
+    <h4 class="method-heading">Returns</h4>
+    <ul>
+    <?js data.returns.forEach(function(r) { ?>
+        <li class="method-returns">
+            <?js r.type.names.forEach(function(t) { ?>
+                <code><?js= self.htmlsafe(t) ?></code>
+            <?js }); ?>
+            <?js if (r.description) { ?>
+                <?js= r.description ?>
+            <?js }; ?>
+        </li>
+    <?js }); ?>
+    </ul>
+<?js } ?>
 
 
 <?js if (data.examples && examples.length) { ?>

@@ -303,17 +303,22 @@ article.event, article.method {
 .method-heading {
   margin: 1em 0; }
 
+li.method-returns,
 .method-params li {
   margin-bottom: 1em; }
 
 .method-source a:link, .method-source a:visited {
   color: var(--light-font-color); }
 
+.method-returns p {
+  margin: 0; }
+
 .event-description,
 .method-description {
   margin: 0 0 2em; }
 
-.param-type code {
+.param-type code,
+.method-returns code {
   color: #111; }
 
 .param-name {

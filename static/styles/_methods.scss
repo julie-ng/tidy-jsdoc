@@ -27,15 +27,20 @@ article {
   margin: 1em 0;
 }
 
-.method-params {
-  li {
-    margin-bottom: 1em;
-  }
+li.method-returns,
+.method-params li {
+  margin-bottom: 1em;
 }
 
 .method-source {
   a:link, a:visited {
     color: var(--light-font-color);
+  }
+}
+
+.method-returns {
+  p {
+    margin: 0;
   }
 }
 
