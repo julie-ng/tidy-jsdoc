@@ -1,7 +1,18 @@
 <?js
 var data = obj;
 var self = this;
+
+// Remove random trailing period from summaries
+if (data.summary && data.summary[data.summary.length-1] === '.') {
+    data.summary = data.summary.slice(0, -1)
+}
+
+var removeTrailingHTMLTag = /<\/[A-z0-9]+>$/
+var hasMethodSummary = (data.kind !== 'class')
+    && data.summary
+    && !data.description.includes(data.summary.replace(removeTrailingHTMLTag, ''));
 ?>
+
 <?js if (data.kind !== 'module' && data.kind !== 'class' ) { ?>
     <article class="method">
 <?js } ?>
@@ -32,10 +43,14 @@ var self = this;
     </h4>
 <?js } ?>
 
-
+<?js if (hasMethodSummary) { ?>
+    <h4 class="method-heading">Summary</h4>
+    <?js= data.summary ?>
+<?js } ?>
 
 <?js if (data.kind !== 'module' && data.description) { ?>
 <div class="method-description">
+    <?js if (hasMethodSummary) { ?><h4 class="method-heading">Description</h4><?js } ?>
     <?js= data.description ?>
 </div>
 <?js } ?>
@@ -64,7 +79,6 @@ var self = this;
     <?js= this.partial('params.tmpl', params) ?>
 <?js } ?>
 
-
 <?js= this.partial('details.tmpl', data) ?>
 
 <?js if (data.returns ) { ?>
@@ -89,8 +103,6 @@ var self = this;
     <h4 class="method-heading">Example<?js= examples.length > 1? 's':'' ?></h4>
     <?js= this.partial('examples.tmpl', examples) ?>
 <?js } ?>
-
-
 
 <?js if (data.kind !== 'module' && data.requires && data.requires.length) { ?>
 <h4 class="method-heading">Requires</h4>
