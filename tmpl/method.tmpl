@@ -82,7 +82,6 @@ var hasMethodSummary = (data.kind !== 'class')
 <?js= this.partial('details.tmpl', data) ?>
 
 <?js if (data.returns ) { ?>
-    <?js= console.log(data.returns) ?>
     <h4 class="method-heading">Returns</h4>
     <ul>
     <?js data.returns.forEach(function(r) { ?>
