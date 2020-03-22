@@ -753,15 +753,3 @@ function buildNavItem(itemContent) {
         '</li>'
     ].join('')
 }
-
-function buildNavType(type, typeLink) {
-    return [
-        '<span class="nav-item-type type-' + type + '">',
-        type[0].toUpperCase(),
-        '</span>',
-
-        '<span class="nav-item-name">',
-        typeLink,
-        '</span>'
-    ].join('')
-}
