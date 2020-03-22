@@ -714,7 +714,7 @@ function buildNavLink(linkClass, linkContent) {
 
 function buildNavType(type, typeLink) {
     return [
-        '<span class="nav-item-type type-' + type + '">',
+        '<span class="nav-item-type type-' + type + '" title="' + type + '">',
         type[0].toUpperCase(),
         '</span>',
 
