@@ -40,7 +40,13 @@
             <?js= self.partial('augments.tmpl', doc) ?>
         <?js } ?>
 
+        <?js if (doc.summary) { ?>
+            <h4 class="method-heading">Summary</h4>
+            <div class="class-summary"><?js= doc.summary ?></div>
+        <?js } ?>
+
         <?js if (doc.classdesc) { ?>
+            <?js if (doc.summary) { ?><h4 class="method-heading">Description</h4><?js } ?>
             <div class="class-description"><?js= doc.classdesc ?></div>
         <?js } ?>
     <?js } else if (doc.kind === 'module' && doc.modules) { ?>
