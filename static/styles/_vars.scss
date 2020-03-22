@@ -15,10 +15,38 @@
   --heading-background: #f7f7f7;
   --code-bg-color: #f8f8f8;
 
+  // Navigation
+  --nav-title-color: var(--primary-color);
+  --nav-title-align: center;
+  --nav-title-size: 1rem;
+  --nav-title-margin-bottom: 1.5em;
+  --nav-title-font-weight: 600;
+  --nav-list-margin-left: 2em;
+  --nav-bg-color: #fff;
+  --nav-heading-display: block;
+  --nav-heading-color: #aaa;
+  --nav-link-color: #666;
+  --nav-text-color: #aaa;
+  --nav-type-class-color: #FFF100;
+  --nav-type-class-bg: #FFB900;
+  --nav-type-typedef-color: #39b739;
+  --nav-type-typedef-bg: #d5efd5;
+  --nav-type-function-color: #549ab9;
+  --nav-type-function-bg: #e1f6ff;
+  --nav-type-namespace-color: #eb6420;
+  --nav-type-namespace-bg: #fad8c7;
+  --nav-type-member-color: #964cb1;
+  --nav-type-member-bg: #f2e4f7;
+  --nav-type-module-color: #964cb1;
+  --nav-type-module-bg: #f2e4f7;
+  --nav-type-event-color: #948b34;
+  --nav-type-event-bg: #fff6a6;
+
   // Layout
   --max-content-width: 900px;
   --nav-width: 320px;
   --padding-unit: 30px;
+  --layout-footer-color: #aaa;
 
   // Fonts
   --base-font-size: 16px;
