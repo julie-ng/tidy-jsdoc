@@ -15,5 +15,5 @@ cache:
     - node_modules
 
 script:
-  - npm audit
+  - npm audit --production
   - npm run sass
