@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.1](https://github.com/julie-ng/tidy-jsdoc/compare/v1.3.0...v1.3.1) (2020-03-23)
+
+
+### Bug Fixes
+
+* **member-types:** style links and hide by default ([f68f435](https://github.com/julie-ng/tidy-jsdoc/commit/f68f4357b167be7d66d3a9d40ce076c008263a49))
+
 ## [1.3.0](https://github.com/julie-ng/tidy-jsdoc/compare/v1.2.2...v1.3.0) (2020-03-23)
 
 
