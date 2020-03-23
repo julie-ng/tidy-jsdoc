@@ -230,11 +230,16 @@ h5 {
   padding: 0.4em 0;
   border-bottom: 1px solid var(--border-color); }
   .subtitle + .event,
+  .subtitle + .member,
   .subtitle + .method {
     border-top: none;
     padding-top: 0; }
 
+.method-type + .method-name {
+  margin-top: 0.5em; }
+
 .event-name,
+.member-name,
 .method-name,
 .type-definition-name {
   margin: 1em 0;
@@ -242,11 +247,8 @@ h5 {
   font-family: var(--code-font);
   font-weight: 600;
   color: var(--primary-color); }
-  .event-name .return-type-signature,
-  .method-name .return-type-signature,
-  .type-definition-name .return-type-signature {
-    color: #aaa; }
   .event-name .signature-attributes,
+  .member-name .signature-attributes,
   .method-name .signature-attributes,
   .type-definition-name .signature-attributes {
     display: inline-block;
@@ -255,6 +257,14 @@ h5 {
     color: #999;
     font-style: italic;
     font-weight: lighter; }
+
+.type-signature {
+  display: inline-block;
+  margin-left: 0.5em; }
+
+.type-signature,
+.return-type-signature {
+  color: #aaa; }
 
 table {
   margin-top: 1rem;
@@ -286,16 +296,15 @@ table {
 .readme h3 {
   margin: 2rem 0 1rem 0; }
 
-article.event, article.method {
+article.event, article.member, article.method {
   padding: 1em 0 1em;
   margin: 1em 0;
   border-top: 1px solid var(--border-color); }
 
-.event-type .method-type-signature:not(:empty),
-.method-type .method-type-signature:not(:empty) {
+.method-type-signature:not(:empty) {
   display: inline-block;
   background: #ecf0f1;
-  color: #95a5a6;
+  color: #627475;
   padding: 0.25em 0.5em 0.35em;
   font-weight: 300;
   font-size: 0.8rem; }
