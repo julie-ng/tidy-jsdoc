@@ -1,6 +1,26 @@
-# Change Log
+# Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+# [1.3.0](https://github.com/julie-ng/tidy-jsdoc/compare/v1.2.2...v1.3.0) (2020-03-23)
+
+
+### Features
+
+* **nav:** explain type icons with title attributes on DOM element ([8a16c30](https://github.com/julie-ng/tidy-jsdoc/commit/8a16c301457f044f3110c633d840fbc5a4104302))
+* **styles:** add more customization  options via css variables ([486bffa](https://github.com/julie-ng/tidy-jsdoc/commit/486bffa6049f6585e52f975006d7abe371093a45))
+* **styles:** format generic code blocks ([ca30d67](https://github.com/julie-ng/tidy-jsdoc/commit/ca30d67c29a303a6fad9aca16c3e35460966c2a6))
+
+
+### Bug Fixes
+
+* add missing 'members' which includes [@readonly](https://github.com/readonly) [@type](https://github.com/type), [#5](https://github.com/julie-ng/tidy-jsdoc/issues/5), [#11](https://github.com/julie-ng/tidy-jsdoc/issues/11) ([840e8c1](https://github.com/julie-ng/tidy-jsdoc/commit/840e8c194f28221dad6465397b2d88846e92a3cd))
+* add missing [@static](https://github.com/static), [#11](https://github.com/julie-ng/tidy-jsdoc/issues/11) ([cf9cdb5](https://github.com/julie-ng/tidy-jsdoc/commit/cf9cdb5d04e3fc485959bb5585db33b7d0282240))
+* link to index.html for older browsers, closes [#9](https://github.com/julie-ng/tidy-jsdoc/issues/9) ([4eeb9a5](https://github.com/julie-ng/tidy-jsdoc/commit/4eeb9a5cb4de369aee6bd0091f61491de0650e9f))
+* missing [@returns](https://github.com/returns), [#10](https://github.com/julie-ng/tidy-jsdoc/issues/10) ([c0494d2](https://github.com/julie-ng/tidy-jsdoc/commit/c0494d2d1721491e178bf720ae2770188ff052e9))
+* missing [@summary](https://github.com/summary) on classes, [#10](https://github.com/julie-ng/tidy-jsdoc/issues/10) ([cd8b1ee](https://github.com/julie-ng/tidy-jsdoc/commit/cd8b1ee03fd0ae28233267a70a357aa7eb9a508d))
+* missing [@summary](https://github.com/summary) on methods, [#10](https://github.com/julie-ng/tidy-jsdoc/issues/10) ([47d0cbc](https://github.com/julie-ng/tidy-jsdoc/commit/47d0cbcec04ddac7059f7221e887522178c582a6))
+* remove duplicate buildNavType() ([cca9c9c](https://github.com/julie-ng/tidy-jsdoc/commit/cca9c9cd56903a1ee339da1871ab2ce492a0ecb5))
 
 ## [1.2.2](https://github.com/julie-ng/tidy-jsdoc/compare/v1.2.1...v1.2.2) (2020-02-01)
 
