@@ -145,11 +145,23 @@
         }
     ?>
 
-    <?js if (hasProperties) { ?>
-        <h3 class="subtitle">Properties</h3>
+
+    <?js
+        var members = self.find({kind: 'member', memberof: isGlobalPage ? {isUndefined: true} : doc.longname});
+
+        // symbols that are assigned to module.exports are not globals, even though they're not a memberof anything
+        if (isGlobalPage && members && members.length && members.forEach) {
+            members = members.filter(function(m) {
+                return m.longname && m.longname.indexOf('module:') !== 0;
+            });
+        }
+        if (members && members.length && members.forEach) {
+    ?>
+        <h3 class="subtitle">Members</h3>
+
         <?js members.forEach(function(p) { ?>
-            <?js= self.partial('properties.tmpl', p) ?>
-        <?js }) ?>
+            <?js= self.partial('members.tmpl', p) ?>
+        <?js }); ?>
     <?js } ?>
 
     <?js

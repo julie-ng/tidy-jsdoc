@@ -1,12 +1,26 @@
 <?js
 var data = obj;
 var self = this;
+
+// TODO: move summary sanitizer to helper method
+if (data.summary) {
+    var removeTrailingHTMLTag = /<\/[A-z0-9]+>$/
+    var cleanSummary = (data.summary[data.summary.length-1] === '.')
+       ? data.summary.slice(0,-1)
+       : data.summary
+
+    var hasSummary = data.summary && !data.description.includes(cleanSummary.replace(removeTrailingHTMLTag, ''));
+}
 ?>
 
-<h3 class="type-definition-name" id="<?js= id ?>"><?js= data.attribs + name + (data.signature ? data.signature : '') ?></h3>
+<article class="member">
+    <div class="method-type">
+        <?js= data.attribs ?>
+    </div>
+<h4 class="member-name" id="<?js= id ?>"><?js= name + (data.signature ? data.signature : '') ?></h4>
 
-<?js if (data.summary && !data.description.includes(data.summary)) { ?>
-<p class="summary"><?js= data.summary ?></p>
+<?js if (hasSummary) { ?>
+    <p class="summary"><?js= data.summary ?></p>
 <?js } ?>
 
 <?js if (data.description) { ?>
@@ -16,7 +30,7 @@ var self = this;
 <?js } ?>
 
 <?js if (data.type && data.type.names) {?>
-    <h4 class="method-heading">Type</h4>
+    <h4>Type</h4>
     <ul>
         <li>
             <?js= self.partial('type.tmpl', data.type.names) ?>
@@ -27,13 +41,24 @@ var self = this;
 <?js= this.partial('details.tmpl', data) ?>
 
 <?js if (data.fires && fires.length) { ?>
-    <h4 class="method-heading">Fires</h4>
+    <h4>Fires</h4>
     <ul><?js fires.forEach(function(f) { ?>
         <li><?js= self.linkto(f) ?></li>
     <?js }); ?></ul>
 <?js } ?>
 
 <?js if (data.examples && examples.length) { ?>
-    <h4 class="method-heading">Example<?js= examples.length > 1? 's':'' ?></h4>
+    <h4>Example<?js= examples.length > 1? 's':'' ?></h4>
     <?js= this.partial('examples.tmpl', examples) ?>
 <?js } ?>
+
+<?js if (data.meta && self.outputSourceFiles) {?>
+    <h4>Source</h4>
+    <ul>
+        <li class="method-source">
+            <?js= self.linkto(meta.shortpath) ?><?js= self.linkto(meta.shortpath, ', line ' + meta.lineno, null, 'source.' + meta.lineno) ?>
+        </li>
+    </ul>
+<?js } ?>
+
+</article>

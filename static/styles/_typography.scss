@@ -32,14 +32,20 @@ h5 {
 	padding: 0.4em 0;
 	border-bottom: 1px solid var(--border-color);
 
-	& + .event,
+  & + .event,
+  & + .member,
   & + .method {
     border-top: none;
     padding-top: 0;
   }
 }
 
+.method-type + .method-name {
+  margin-top: 0.5em;
+}
+
 .event-name,
+.member-name,
 .method-name,
 .type-definition-name {
   margin: 1em 0;
@@ -47,10 +53,6 @@ h5 {
   font-family: var(--code-font);
   font-weight: 600;
   color: var(--primary-color);
-
-  .return-type-signature {
-    color: #aaa;
-  }
 
   // e.g. "opt"
   .signature-attributes {
@@ -61,4 +63,14 @@ h5 {
     font-style: italic;
     font-weight: lighter;
   }
+}
+
+.type-signature {
+  display: inline-block;
+  margin-left: 0.5em;
+}
+
+.type-signature,
+.return-type-signature {
+  color: #aaa;
 }

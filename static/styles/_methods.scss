@@ -4,6 +4,7 @@
 
 article {
   &.event,
+  &.member,
   &.method {
     padding: 1em 0 1em;
     margin: 1em 0;
@@ -11,16 +12,13 @@ article {
   }
 }
 
-.event-type,
-.method-type {
-  .method-type-signature:not(:empty) {
-    display: inline-block;
-    background: #ecf0f1;
-    color: #95a5a6;
-    padding: 0.25em 0.5em 0.35em;
-    font-weight: 300;
-    font-size: 0.8rem;
-  }
+.method-type-signature:not(:empty) {
+  display: inline-block;
+  background: #ecf0f1;
+  color: #627475; //#95a5a6;
+  padding: 0.25em 0.5em 0.35em;
+  font-weight: 300;
+  font-size: 0.8rem;
 }
 
 .method-heading {
