@@ -70,7 +70,18 @@ h5 {
   margin-left: 0.5em;
 }
 
+.member-name {
+  .type-signature {
+    display: var(--member-name-signature-display);
+  }
+}
+
 .type-signature,
 .return-type-signature {
   color: #aaa;
+  font-weight: 400;
+
+  a:link, a:visited {
+    color: #aaa;
+  }
 }
