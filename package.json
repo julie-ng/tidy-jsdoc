@@ -29,7 +29,7 @@
     "gulp": "^4.0.0",
     "gulp-sass": "^4.0.0",
     "marked": "^0.7.0",
-    "standard-version": "^5.0.1",
+    "standard-version": "^7.1.0",
     "tar": " >=4.4.2"
   }
 }
