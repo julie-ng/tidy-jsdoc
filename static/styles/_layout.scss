@@ -113,38 +113,38 @@
   // margin-left: 1em;
 
   &.type-class {
-    background: var(--nav-type-class-bg);
     color: var(--nav-type-class-color);
+    background: var(--nav-type-class-bg);
   }
 
   &.type-typedef {
-    background: var(--nav-type-typedef-bg);
     color: var(--nav-type-typedef-color);
+    background: var(--nav-type-typedef-bg);
   }
 
   &.type-function {
-    background: var(--nav-type-function-bg);
     color: var(--nav-type-function-color);
+    background: var(--nav-type-function-bg);
   }
 
   &.type-namespace {
-    color:  var(--nav-type-namespace-bg);
-    background: var(--nav-type-namespace-color);
+    color:  var(--nav-type-namespace-color);
+    background: var(--nav-type-namespace-bg);
   }
 
   &.type-member {
-    color:  var(--nav-type-member-bg);
-    background: var(--nav-type-member-color);
+    color:  var(--nav-type-member-color);
+    background: var(--nav-type-member-bg);
   }
 
   &.type-module {
-    color:  var(--nav-type-module-bg);
-    background: var(--nav-type-module-color);
+    color:  var(--nav-type-module-color);
+    background: var(--nav-type-module-bg);
   }
 
   &.type-event {
-    color:  var(--nav-type-event-bg);
-    background: var(--nav-type-event-color);
+    color:  var(--nav-type-event-color);
+    background: var(--nav-type-event-bg);
   }
 }
 
