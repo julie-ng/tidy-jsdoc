@@ -148,6 +148,21 @@
   }
 }
 
+.nav-item-name {
+  &.is-function {
+    &:after {
+      display: inline;
+      content: '()';
+      color: var(--nav-link-color);
+      opacity: 0.75;
+    }
+  }
+
+  &.is-class {
+    font-size: 1.1em;
+  }
+}
+
 .layout-footer {
   padding-top: 2rem;
   padding-bottom: 2rem;

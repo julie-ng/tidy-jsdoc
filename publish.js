@@ -722,7 +722,7 @@ function buildNavType(type, typeLink) {
         type[0].toUpperCase(),
         '</span>',
 
-        '<span class="nav-item-name">',
+        `<span class="nav-item-name is-${type}">`,
         typeLink,
         '</span>'
     ].join('')
