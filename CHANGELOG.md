@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/julie-ng/tidy-jsdoc/compare/v1.3.1...v1.4.0) (2020-03-25)
+
+
+### Features
+
+* **nav:** bring back members ([9322ea1](https://github.com/julie-ng/tidy-jsdoc/commit/9322ea149cfb9f6237a81378dfc4b5ee7ca13cba))
+* **nav:** class names are slightly larger ([86a5b7e](https://github.com/julie-ng/tidy-jsdoc/commit/86a5b7e78ad3898e5939f17bce752df88004e896))
+* simplify signature markup ([2819730](https://github.com/julie-ng/tidy-jsdoc/commit/281973085b7b14395167dfe89970c02955add703))
+
+
+### Bug Fixes
+
+* css variables for nav colors were mis-matched ([d989561](https://github.com/julie-ng/tidy-jsdoc/commit/d989561d339078dfc346022d133d4d2406fa887a))
+
 ### [1.3.1](https://github.com/julie-ng/tidy-jsdoc/compare/v1.3.0...v1.3.1) (2020-03-23)
 
 
