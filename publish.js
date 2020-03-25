@@ -181,10 +181,12 @@ function addSignatureTypes(f) {
 
 function addAttribs(f) {
     var attribs = helper.getAttribs(f);
-    var attribsString = buildAttribsString(attribs);
-
     if (attribs.length) {
-        f.attribs = '<span class="method-type-signature ' + (attribs[0] === 'static' ? 'static' : '') + '">' + htmlsafe(attribs.length ? attribs.join(',') : '') + '</span>';
+        var str = ''
+        attribs.forEach(function(a) {
+            str = str + `<span class="method-type-signature is-${a}">${a}</span>`;
+        })
+        f.attribs = str
     }
 }
 
