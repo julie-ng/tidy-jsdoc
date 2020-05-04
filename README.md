@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/julie-ng/tidy-jsdoc.svg?branch=master)](https://travis-ci.org/julie-ng/tidy-jsdoc)
 [![Known Vulnerabilities](https://snyk.io//test/github/julie-ng/tidy-jsdoc/badge.svg?targetFile=package.json)](https://snyk.io//test/github/julie-ng/tidy-jsdoc?targetFile=package.json)
 
-A minimalist and clearn [jsdoc](https://jsdoc.app/index.html) template. 
+A minimalist and clean [jsdoc](https://jsdoc.app/index.html) template. 
 
  ### Features
 
