@@ -14,7 +14,6 @@
   ],
   "homepage": "https://github.com/julie-ng/tidy-jsdoc",
   "scripts": {
-    "release": "standard-version --sign",
     "sass": "gulp sass",
     "sass:watch": "gulp sass:watch",
     "preflight": "npm run sass & npm audit"
@@ -27,9 +26,14 @@
   "devDependencies": {
     "bootstrap": "^4.3.1",
     "gulp": "^4.0.2",
-    "gulp-sass": "^4.0.0",
+    "gulp-sass": "^5.1.0",
     "marked": "^0.7.0",
-    "standard-version": "^9.2.0",
-    "tar": " >=4.4.2"
+    "tar": "^6.1.11"
+  },
+  "overrides": {
+    "glob-parent": "6.0.2",
+    "glob-stream": "7.0.0",
+    "glob-watcher": "5.0.5",
+    "chokidar": "3.5.2"
   }
 }
