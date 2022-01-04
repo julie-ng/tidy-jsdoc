@@ -685,6 +685,7 @@ exports.publish = function (taffyData, opts, tutorials) {
     function generateTutorial(title, tutorial, filename) {
         var tutorialData = {
             title: title,
+            kind: null,
             header: tutorial.title,
             content: tutorial.parse(),
             children: tutorial.children
